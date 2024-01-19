@@ -1,0 +1,67 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<Section>
+  <div class="container">
+    <SectionTitle
+      title="Our Network of Schools in Bengaluru"
+      classes="text-center pb-4"
+    />
+    <p class="para text-center pb-5 w-50">
+      Siddhanta Intellectual School is part of a broader educational network
+      that includes other esteemed institutions in Bengaluru. These schools
+      share our commitment to quality education and holistic development. They
+      are:
+    </p>
+
+    <div class="network-grid">
+      <div class="network-slide">
+        <p><img src="/images/nps.png" alt="" /></p>
+        <p><img src="/images/gurukul.png" alt="" /></p>
+        <p><img src="/images/jumbo.png" alt="" /></p>
+      
+       
+      </div>
+      
+    </div>
+  </div>
+</Section>
+
+<style lang="scss">
+  .para{
+    margin: 0 auto;
+  }
+  .network-grid {
+    
+    width: 100%;
+    
+
+    .network-slide {
+     
+      
+      width: 100%;
+      
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      // flex-direction: column;
+      
+
+      
+     
+
+      
+
+      img{
+        // // width: 70%;
+        height: 120px;
+        
+        width: 200px;
+        object-fit: contain;
+        margin: 0 auto !important;
+      }
+    }
+  }
+</style>

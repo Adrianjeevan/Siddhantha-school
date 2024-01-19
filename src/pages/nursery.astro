@@ -1,0 +1,139 @@
+---
+import CourseBanner from "../components/CourseBanner.astro";
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Nursery, LKG, UKG">
+  <PageBanner
+    title="Nursery, LKG, UKG"
+    quote="The best brains of the nation may be found on the last benches of the classroom."
+    author="- Dr. A.P.J. Abdul Kalam "
+  />
+  <!-- <CourseBanner /> -->
+
+  <Section>
+    <div class="container">
+      <div class="course-content">
+        <div>
+          <div class="sub-title">Upper Kindergarten</div>
+          <p>
+            Upper Kindergarten education sets the tone for a child's learning in
+            the child's upbringing environment and lays a healthy foundation for
+            the child's overall development. As they are at an important stage
+            of their development, these little babies deserve all the care and
+            attention as they embark on this new world of learning. Learning is
+            best suited for this age group if it is structured (according to a
+            predictable schedule) and exploratory (the area of interest where
+            the child can start his activities). At this stage, children are
+            active, want to learn and love to do and do activities that interest
+            them. Educators at our Upper Kindergarten School in Bangalore
+            monitor and change your child's behaviour and focus on asking
+            questions that take children to the next level of cognitive inquiry
+            and understanding.The UKG curriculum at our Upper Kindergarten
+            School in Bangalore considers these aspects and provides an
+            environment where all children can enjoy their learning activities.
+            The school has developed an innovative and engaging teaching method
+            that combines the Playful techniques. It encompasses all five senses
+            and emphasizes learning to draw children purposefully.
+          </p>
+        </div>
+
+        <div>
+          <div>
+            <div class="sub-title">
+              What is the objective of our Upper Kindergarten School in
+              Bangalore
+            </div>
+          
+            <ul>
+              <li>Language development</li>
+              <li>Develop individual abilities</li>
+              <li>Development of fine motors</li>
+              <li>Personal consciousness</li>
+              <li>Gross motor development</li>
+              <li>Social and emotional development</li>
+              <li>Cognitive development</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="sub-title">
+            Features of our Upper Kindergarten program
+          </div>
+          <ul>
+            <li>
+              The focus is on giving children a free atmosphere so they can play, sing and move.
+
+            </li>
+            <li>
+              The use of games, fun materials, storytelling, role-playing, group activities, alphabet trimming and number teaching are crucial to the learning process.
+
+            </li>
+            <li>
+              Play equipment allows children to see, touch, feel and explore.
+
+            </li>
+            <li>
+              Our Upper Kindergarten School in Bangalore aims to facilitate learning best by playing, reading, playing stories and adventures, juggling clay, brushes, finger paints, building blocks and sports materials.
+
+            </li>
+            <li>
+              The curriculum focuses on the child's general development in a number of different areas, including physical and creative abilities, language, numeracy and general cognition.
+
+            </li>
+            <li>
+              Theme-based activity spaces allow children to develop motor skills, creativity, imagination, teamwork, social skills, and more.
+
+            </li>
+            <li>
+              Practical learning is promoted through projects and activities that include arts and crafts, technology, music and dance. These activities help children acquire integrated knowledge, fine motor skills, and gross motor skills and have fun learning.
+
+            </li>
+            <li>
+              Classrooms and activity rooms are colourfully designed to make children more interesting. They have a great opportunity to explore the surroundings and become more aware.
+
+            </li>
+            <li>
+              Festivals and special celebrations help children understand and appreciate cultural heritage and diversity.
+
+            </li>
+         
+          </ul>
+        </div>
+      </div>
+
+     
+    </div>
+  </Section>
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss" is:global >
+  .course-content {
+    // color: white;
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-end;
+    gap: 4rem;
+
+    .sub-title{
+      padding-bottom: 2rem;
+    }
+   
+    ul{
+      padding-left: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+ 
+</style>
+
+<style lang="scss" is:global></style>

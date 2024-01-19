@@ -1,0 +1,164 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<Section style="padding-bottom:0;">
+  <SectionTitle title="Founders Message" classes="text-center" />
+  <div class="container">
+    <div class="row founder">
+      <div class="col-lg-5">
+        <img src="/images/founder-bg.svg" alt="" class="f-bg">
+        <img
+          src="/images/anand.png"
+          class="anand animate__animated  animate__pulse "
+          alt=""
+         
+        />
+        <img
+          src="/images/siddhi-new.png"
+          class="siddhi animate__animated  animate__pulse "
+          alt=""
+          
+        />
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="one " id="anand">
+            <img src="/images/anand-btn.png" alt="" class="">
+          </div>
+          <div class="one" id="siddhi">
+            <img src="/images/siddhi.png" alt="">
+          </div>
+        </div>
+
+        <div>
+          <div class="anand-text animate__animated animate__fadeIn">
+            <h4>
+                Anand Kumar M S
+            </h4>
+            <span >Founder</span>
+            <p class="pt-3">
+                Anand Kumar M S, a professional, having over 18 years of experience in product management, large-scale strategy building and implementation. He has successfully managed multimillion projects acrossvariousverticals.Apart from hisstellarcareer in product management, he has launched numerous start-ups, his first venture being ‘Success’ a tutorial center at the age of 19. Also a certified financial planner from the Financial Planning Standards Board, India, he is one of the youngest people to receive such a certification. His stint with multinational firms such as Fiserv and FinEye Corporation has helped him gain rich professional experience in customer centric approach to do business and rendering service. Being a holder of a Master’s Degree in Financial Planning and Management from the University of Mysore, Anand aims at bringing up an institution like Siddhanta Intellectual School, to share his knowledge and experience and create a legacyin making tomorrow’s leaders.
+            </p>
+          </div>
+          <div class="siddhi-text animate__animated animate__fadeIn">
+            <h4>
+                S Siddhilakshmi
+            </h4>
+            <span>Founder</span>
+            <p class="pt-3">
+                G S Siddhi Lakshmi, a pre-school educationist for more than 10 years now, owns two Podar Jumbo Kids centers in Electronic City and HSR Layout. She has also worked as an ethical hacker for more than 2 years in the IT Industry. She is a telecommunication graduate from BMSIT. A passionate individual in spreading knowledge and educating young minds, she has been successful in gaining the goodwill of numerous parents. Her efforts in the field of educating kids with utmost care go unquestioned.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Section>
+
+<style lang="scss">
+
+
+
+.founder{
+    justify-content: center;
+    transition: all 0.5s ease;
+    height: 600px;
+   
+    
+    
+    >:nth-child(1){
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        img{
+            max-width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            transition: all 0.5s ease-in-out;
+
+        }
+        .f-bg{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            max-width: 600px;
+            fill: red;
+        }
+    }
+
+    >:nth-child(2){
+        display: flex;
+            gap: 2rem;
+            flex-direction: column;
+            gap: 3rem;
+
+            *{
+              transition: all 0.5s ease-in-out;
+            }
+
+            h4{
+              color: var(--blue) ;
+            }
+
+            span{
+              color: var(--dark-blue) ;
+            }
+        >:nth-child(1){
+            display: flex;
+            gap: 2rem;
+       }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            
+        }
+
+        .one{
+            width: 90px;
+            height: 90px;
+            border-radius: 90px;
+            overflow: hidden;
+            cursor: pointer;
+            // padding: 0.1rem;
+            border: solid 2px var(--blue);
+
+           
+        }
+    }
+}
+
+</style>
+
+<script>
+  const ones = document.getElementById("anand");
+  const twos = document.getElementById("siddhi");
+  const siddhi = document.querySelector(".siddhi");
+  const anand = document.querySelector(".anand");
+  const text1 = document.querySelector(".anand-text");
+  const text2 = document.querySelector(".siddhi-text");
+
+  siddhi.style.display = "none";
+  text2.style.display = "none";
+
+  ones.addEventListener("click", () => {
+    siddhi.style.display = "none";
+    text2.style.display = "none";
+    text1.style.display = "block";
+    anand.style.display = "block";
+  });
+
+  twos.addEventListener("click", () => {
+    siddhi.style.display = "block";
+    text2.style.display = "block";
+    text1.style.display = "none";
+    anand.style.display = "none";
+  });
+</script>

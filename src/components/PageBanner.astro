@@ -1,0 +1,267 @@
+---
+const { title, secondtitle, quote, author, isquote } = Astro.props;
+---
+
+<div style="">
+  <div class="container">
+    <div class="row pagebanner">
+      <div class="col-lg-5">
+        <div>
+          <a href=""
+            >Home
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-chevron-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              ></path>
+            </svg>
+          </a>
+          <div class="big text-start">{title}</div>
+
+          {
+            secondtitle && (
+            <p>{secondtitle}</p>
+            )
+          }
+
+          
+
+         {
+          isquote &&  <div class="w-100 mt-5 quote">
+            <p>"{quote}"</p>
+            <p>{author}</p>
+          </div>
+         }
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <img src="/images/final.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .pagebanner {
+    margin-top:var(--header-height);
+    height: 50vh;
+
+    // display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 2rem 0;
+    justify-content: space-around;
+
+    a {
+      font-size: 14px;
+      // margin: 0;
+    }
+
+    .big {
+      font-size: clamp(23px, 4vw, 55px);
+      color: var(--dark-blue);
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0;
+      margin-left: -5px;
+    }
+
+    svg {
+      width: 10px;
+      height: 10px;
+      stroke-width: 2px;
+      stroke: black;
+    }
+
+    > :nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      height: 100%;
+
+      // div {
+      //   width: 60%;
+
+      //   margin: 0 auto;
+      // }
+
+      .quote {
+        padding: 1rem;
+        background-color: var(--light-blue);
+        border-radius: 15px;
+      }
+    }
+    > :nth-child(2) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+      height: 100%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .square {
+    position: relative;
+    // margin: 0 10px;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // @media screen and max {
+
+    // }
+  }
+
+  .square span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    // animation: animate 5s linear infinite ;
+  }
+
+  .linkedin:hover span:nth-child(1) {
+    border: none;
+    background: #f07e6e;
+  }
+
+  .twitter:hover span:nth-child(1) {
+    border: none;
+    background: #84cdfa;
+  }
+
+  .github:hover span:nth-child(1) {
+    border: none;
+    background: #5ad1cd;
+  }
+
+  .square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    // border: 2px solid black;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    z-index: -2;
+    animation: animate 4s linear infinite;
+    background: var(--dark-blue);
+  }
+
+  .linkedin:hover span:nth-child(2) {
+    border: none;
+    background: #f0bbb4;
+  }
+
+  .twitter:hover span:nth-child(2) {
+    border: none;
+    background: #84cdfa;
+  }
+
+  .github:hover span:nth-child(2) {
+    border: none;
+    background: #5ad1cd;
+  }
+
+  .square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 40%;
+    // border: 2px solid black;
+    border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+    background: var(--blue);
+  }
+
+  .linkedin:hover span:nth-child(3) {
+    border: none;
+    background: #f07e6e;
+  }
+
+  .twitter:hover span:nth-child(3) {
+    border: none;
+    background: #84cdfa;
+  }
+
+  .github:hover span:nth-child(3) {
+    border: none;
+    background: #5ad1cd;
+  }
+
+  .content {
+    position: relative;
+    padding: 40px 60px;
+    color: black;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 1000;
+  }
+
+  .content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    padding: 6px 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+  }
+
+  .content a:hover {
+    background: white;
+    color: #333;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes animate2 {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+</style>

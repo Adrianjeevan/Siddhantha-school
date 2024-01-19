@@ -1,0 +1,124 @@
+---
+
+---
+
+<div class="facility-slider">
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/SR-33.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Physics Lab</h4>
+  </div>
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/SR-34.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Chemisty Lab</h4>
+  </div>
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/VR-233.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Biology Lab</h4>
+  </div>
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/VR-220.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Ventilated Study Area</h4>
+  </div>
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/001.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Indoor Play Area</h4>
+  </div>
+  <div class="facility-layout">
+    <img
+      src="/images/amenities/VR-170.jpg"
+      alt="Siddhantha Intellectual school - ameneties"
+    />
+    <h4>Outdoor Play Area</h4>
+  </div>
+</div>
+
+<div class="controls-containers">
+  <div class="control-button prev">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-chevron-left"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+      ></path>
+    </svg>
+  </div>
+  <div class="control-button next">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="16"
+      fill="currentColor"
+      class="bi bi-chevron-right"
+      viewBox="0 0 16 16"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+      ></path>
+    </svg>
+  </div>
+</div>
+
+<style lang="scss">
+  .facility-slider {
+    padding: 4rem 0;
+    height: auto;
+
+    .facility-layout {
+      h4 {
+        padding: 1rem;
+        margin-top: 1rem;
+        display: inline-block;
+        background-color: var(--brown);
+        border-radius: 15px;
+        color: white;
+        // text-align: center;
+      }
+
+      img {
+        width: 100%;
+
+        margin: 0 auto;
+      }
+    }
+  }
+  .controls-containers {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    // padding-top: 2rem;
+    .control-button {
+      border: solid 1px black;
+      padding: 0.6rem 0.6rem;
+      cursor: pointer;
+      font-weight: 600;
+
+      svg {
+        stroke: 8px !important;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+</style>

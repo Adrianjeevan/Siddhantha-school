@@ -1,0 +1,103 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Grade 9 - 10">
+  <PageBanner title="Grade 9 - 10" quote="Education is one thing no one can take away from you." author=" - Elin Nordegren" />
+
+
+  <Section>
+    <div class="container">
+      <div class="course-content">
+        <div>
+          <div class="sub-title">
+            Summer Camp Program in Banglore
+          </div>
+          <p>
+            Spring has just arrived, but it's never too early to complete a summer camp plan. If you're looking for the perfect summer camp experience for your child, Siddhanta Intellectual School is the best preschool and daycare offering a fun and amazing Summer Camp in Bangalore. Siddhanta Intellectual School’s Summer Camp makes it easy by giving your child all the fun and exciting summer offers. And here is the best part. They learn while spending their time in life! Most of our summer camp programs are aimed at preschoolers to teens but offer special benefits for young children, such as a private playground, pool, and half-litre sporting goods.
+Siddhanta Intellectual School is one of the pioneers of the preschool segment, which also offers summer camps for children. Our Summer Camp in Bangalore is carefully planned to provide structured opportunities for children to grow, be self-reliant and confident, socialize, make new friends and even learn new skills. At Siddhanta Intellectual School, we not only offer summer camp programs for school-aged and preschoolers. Experience great parenting and exciting summer fun for toddlers and twos! Forget about regular daycare. These young children learn and grow throughout the summer with fun activities and special guests. Children are encouraged to explore the arts, nature and outdoor activities we offer. There are hours of fun in the sun that help children develop these important social relationships.
+          </p>
+        </div>
+
+        <div>
+          <div class="sub-title">
+            Summer Camp Activities
+          </div>
+          <p>
+            Kids need to be busy, and summer is the perfect time to make great memories. Summer Camp offered by Siddhanta Intellectual School is a great way to get involved in activities that your child loves. Our summer camp for preschoolers is fun, interactive, captures children's interests, guided by well-trained teachers, parents comfortably sit in the backseat, and children have hidden talents. It allows you to explore your interests.
+          </p>
+
+          <p class="pt-3 ">
+            If your child is under 6 years old, you will have various summer camping opportunities at Siddhanta Intellectual School. Our summer camp overview for young campers who miss kindergarten or are about to go to kindergarten is a selection of the many different activities. Here are some fun summer camp activities:
+          </p>
+
+          <ul>
+            <li>Magic Mania</li>
+            <li>Cunning Clay</li>
+            <li>Yoga and Zumba</li>
+            <li>Music and Dance</li>
+            <li>Making Dolls</li>
+            <li>Exciting Game</li>
+            <li>Creative Craftsmanship</li>
+            <li>Vegetable Sculpture</li>
+            <li>Flower Arrangement</li>
+            <li>Moving Story</li>
+            <li>Curious Scientist</li>
+            <li>Delicious Refractory Cooking</li>
+            <li>Busy Brains - Riddles and Riddles</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss">
+  .lists {
+    > :nth-child(1) {
+      background-color: aliceblue;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    > :nth-child(2) {
+      background-color: aliceblue;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    h2 {
+      font-size: 22px;
+      padding-bottom: 10px;
+      color: var(--blue);
+
+      span {
+        font-size: 18px;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 0.5rem;
+        display: flex;
+        gap: 15px;
+        span {
+          color: var(--brown);
+        }
+      }
+    }
+  }
+</style>

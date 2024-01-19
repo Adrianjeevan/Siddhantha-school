@@ -1,0 +1,132 @@
+---
+const { date, month, name, time, location, image, link } = Astro.props;
+---
+
+<div class="event-grid">
+
+  <div class="image">
+    <img src={image} alt="Siddhantha Intellectual school" />
+  </div>
+
+  <div class="d-flex gap-3 dates">
+    <h4>{date}</h4>
+    <p>{month}</p>
+  </div>
+
+
+
+  <div>
+    <a class="sub-title pb-2 " href={link}>
+      {name}
+    </a>
+
+
+  
+  </div>
+
+  <!-- <div class="time-date">
+    <div>
+      <span class="material-symbols-outlined">
+        schedule
+        </span>
+
+      <span>{time}</span>
+
+
+    </div>
+
+    <div>
+      <span class="material-symbols-outlined">
+        location_on
+        </span>
+
+      <span>Bangalore</span>
+    </div>
+  </div> -->
+
+  
+</div>
+
+
+
+<style lang="scss">
+  .event-grid {
+   
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    border-radius: 10px;
+    
+    backdrop-filter: blur(30px);
+    
+    background-color:#ffffff;
+    gap: 1rem;
+    // border: solid 2px var(--blue);
+    border: solid 2px var(--dark-blue);
+    padding: 2rem;
+    transition: all 0.8s ease;
+
+   *{
+    transition: all 0.8s ease !important;
+   }
+
+
+    &:hover{
+      border: solid 2px var(--dark-blue);
+      transition: all 0.5s ease;
+      background-color:#c9e4f56d;
+      backdrop-filter: blur(30px);
+      
+
+      
+    }
+   
+
+    
+
+    
+
+    
+
+    .time-date {
+      display: flex;
+      gap: 1rem;
+      align-items: center; 
+      >div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 6px;
+
+        span{
+          font-size: 19px;
+        }
+       
+
+        // p{
+        //   margin: 0;
+        // }
+
+        // svg{
+        //   height: 16px;
+        // }
+      }
+    }
+
+
+
+    .image {
+      width: 100%;
+      transition: all 0.5s ease;
+      
+      border-radius: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+</style>

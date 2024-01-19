@@ -1,0 +1,129 @@
+---
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Admissions">
+  <PageBanner title="Admissions" />
+  <Section>
+
+
+      
+    <div class="container">
+      <SectionTitle title="Admission Procedure" classes="text-center" />
+
+      <!-- Calendly inline widget begin -->
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/siddhanthaschool/school-tour?hide_gdpr_banner=1"
+        style="min-width:320px;height:700px;"
+      >
+      </div>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async></script>
+      <!-- Calendly inline widget end -->
+      <div class="admission pt-5">
+
+
+
+        <ul>
+          <li>
+            <strong>Step 1:</strong> Online Inquiry Submission - Parents initiate
+            the process by completing the Enquiry Form on our website.
+          </li>
+
+          <li>
+            <strong>Step 2:</strong> Informational Connection - Our school counsellor
+            engages with parents over a call, providing details about the school,
+            including the fee structure, options for virtual or phone counselling,
+            campus visits, etc.
+          </li>
+
+          <li>
+            <strong>Step 3:</strong> Consultation with Parent Counsellor - Schedule
+            a meeting with the Parent Counsellor to discuss specific concerns and
+            queries.
+          </li>
+
+          <li>
+            <strong>Step 4:</strong> Guided Campus Tour - Experience a comprehensive
+            tour of the campus to familiarize parents with our facilities.
+          </li>
+
+          <li>
+            <strong>Step 5:</strong> Principal's Personal Interview - Participate
+            in a Personal Interview with the Principal to ensure a personalized understanding
+            of the child's needs and aspirations.
+          </li>
+
+          <li>
+            <strong>Step 6:</strong> Application Submission - Parents are then requested
+            to complete and submit the Application Form for their child's school
+            admission, including all necessary documents.
+          </li>
+
+          <li>
+            <strong>Step 7:</strong> Baseline Assessment (Grade 1 and above) - For
+            Grade 1 and above admissions, the child undergoes an online Baseline
+            Assessment Test.
+          </li>
+
+          <li>
+            <strong>Step 8:</strong> Admission Confirmation - Confirm admission by
+            submitting the Registration amount, solidifying the enrollment process.
+          </li>
+
+          <li>
+            <strong>Step 9:</strong> Enrolment Finalization - Upon payment, the child's
+            enrolment number is generated, marking the successful completion of the
+            admission process.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+</Layout>
+
+<style lang="scss">
+  .admission {
+  
+
+
+     svg{
+
+        #leaves{
+            fill:red ;
+            
+        }
+     }
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; 
+      background-color: rgba(165, 212, 244, 0.511);
+      padding: 2rem; 
+      border-radius: 10px;
+      backdrop-filter: blur(20px);
+
+      li {
+        padding-bottom: 1rem;
+
+        strong{
+            color: var(--blue);
+        }
+      }
+
+      .sub-title {
+        color: var(--brown);
+
+        strong {
+          color: var(--brown) !important;
+        }
+      }
+    }
+  }
+</style>

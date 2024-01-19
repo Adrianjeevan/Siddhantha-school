@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Hero from "../components/Hero.astro";
+import Course from "../components/Course.astro";
+import Whyus from "../components/Whyus.astro";
+import Events from "../components/Events.astro";
+import Testimonial from "../components/Testimonial.astro";
+import BookingSection from "../components/BookingSection.astro";
+import Section from "../components/Section.astro";
+import HighlightsHome from "../components/HighlightsHome.astro";
+import OurHighlight from "../components/OurHighlight.astro";
+import Learning from '../components/Learning.astro'
+import Journey from "../components/Journey.astro";
+import Networks from "../components/Networks.astro";
+import ImageMovingSlider from "../components/ImageMovingSlider.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+---
+
+<Layout title="Siddhantha Intellectual school">
+  <Hero />
+  <!-- <Course /> -->
+  <Section style="padding-bottom:0rem;" >
+    <div class="container">
+
+      <SectionTitle title="About Sidhhantha" classes="text-center" style="padding-bottom:3rem;"/>
+      <p class="fadein para text-center w-75 " style="margin: 0 auto;">
+        Welcome to Siddhanta Intellectual School, where we believe in the principle of "Culture Before Curriculum." At Siddhanta, we recognize that education is not solely about acquiring knowledge and academic excellence, but also about shaping individuals into responsible, compassionate, and cultured human beings.
+      </p>
+    </div>
+  </Section>
+
+  <HighlightsHome/>
+  <Whyus />
+  <OurHighlight/>
+ 
+
+  
+  <Learning />
+  <ImageMovingSlider/>
+  <Journey/>
+  
+
+  <Events />
+  <Testimonial />
+  <Networks />
+  <!-- <BookingSection/> -->
+</Layout>
+
+<style lang="scss">
+  .f-carousel__slide.is-nav-selected {
+    color: #fff;
+    background: #ff3520;
+  }
+
+  #myNavigation {
+    --f-carousel-slide-width: 100px;
+    --f-carousel-spacing: 5px;
+    //    background-color:red;
+    width: 300px;
+  }
+  .f-carousel {
+    --f-button-display: none !important;
+    --f-button-width: 38px;
+    --f-button-height: 38px;
+
+    --f-button-svg-width: 0px;
+    --f-button-svg-height: 16px;
+    --f-button-svg-stroke-width: 2.5;
+
+    --f-button-color: rgb(71 85 105);
+    --f-button-border-radius: 50%;
+    --f-button-shadow: 0 6px 12px -2px rgb(50 50 93 / 25%),
+      0 3px 7px -3px rgb(0 0 0 / 30%);
+
+    --f-button-bg: #fff;
+    --f-button-hover-bg: #f9f9f9;
+    --f-button-active-bg: #f0f0f0;
+  }
+</style>

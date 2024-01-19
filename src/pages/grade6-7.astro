@@ -1,0 +1,111 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Grade 6 - 8">
+  <PageBanner title="Grade 6 - 8" quote="Your education is a dress rehearsal for a life that is yours to lead."  author="- Nora Ephron" />
+ 
+
+  <Section>
+
+    <div class="container">
+      <div class="course-content">
+        <div>
+
+          <div class="sub-title">
+            Montessori Education Program
+          </div>
+          <p>
+            Curiosity and happiness come alive in places where children can pursue their interests and explore their surroundings. The Montessori education program allows children to create their own learning paths based on students' interest in building a knowledge society. Montessori education fosters a child's natural curiosity, instils a love for learning, and provides one of the most effective and efficient academic learning environments. There are many studies showing that Montessori-educated children are more academically and socially prepared than their classmates.We are the best Montessori School Bangalore offering advanced learning materials designed to engage students in hands-on and outdoor learning while spending time in the garden or school campus. Our instructors provide an environment of freedom and tools for students to search for answers to their questions. Inner satisfaction drives a child's curiosity and interests and leads to enjoyable lifelong learning.
+          </p>
+        </div>
+
+        <div>
+          <div class="sub-title">
+            Benefits of Montessori education
+          </div>
+
+          <ul>
+            <li><span>Each child is valued as a unique individual-</span>Montessori education recognizes that children learn in different ways and are compatible with all learning styles. Students are free to study at their own pace, and each starts when they are ready, based on the teacher and the individual curriculum.  </li>
+            <li><span>Montessori education fosters order, focus and independence from an early age-</span>The intended design of classrooms, learning materials, and everyday life support a new "self-regulation" of students from infants to teens (the ability to educate themselves and think about what they are learning).</li>
+            <li><span>Montessori students enjoy freedom within boundaries-</span>
+              By working within the standards set by the teacher and the classroom, students actively participate in determining the focus of learning.</li>
+              <li>
+                <span>Montessori supports social and emotional skills- </span>Recent studies have supported the effectiveness of the Montessori method for 100 years, and children attending Montessori classes show stronger social and emotional skills in more areas than children in traditional settings.
+              </li>
+          </ul>
+        </div>
+
+        <div>
+          <h1 class="sub-title">The best Montessori School in Bangalore</h1>
+          <p>Our Montessori School Bangalore not only provide what your little bitch covets but also ensures that you do your best for the thriving Little Angels. Our Montessori school has smart, air-conditioned thematic glass classrooms, space for intellectual development, galaxies, mini-theatres, paddling pools, libraries with puppet shows, and special stories. Under the improved supervision of experienced Montessori teachers, children gain creativity and imagination wings, language labs, 3D theatres and more.</p>
+        </div>
+
+        <div>
+          <div class="sub-title">
+            Why choose our Montessori education program?
+          </div>
+          <ul>
+            <li>We are the best Montessori School in Bangalore designed to enrich your child with genuine education that gives good guidelines and humane values.</li>
+            <li>Our Montessori education program has come together to unleash great potential for children by challenging new possibilities and widening the distance between quality and real education.</li>
+            <li>The school builds strong and positive bonds with students so that they can become self-reliant, self-confident, and gain academic knowledge.</li>
+            <li>Our Montessori School Bangalore leads a progressive journey and is reinforced by the ongoing support and compassion that parents, teachers, and students receive.</li>
+            <li>Our students have different interests, personalities, and learning styles. Our approach supports the development of individual capabilities, and our results are consistent.</li>
+            <li>Our students are academically well-prepared, show creativity, self-confidence, ability, and love to learn what is most important.</li>
+            <li>The school focuses on individual children and provides an environment that truly stimulates their love for lifelong learning.</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </Section>
+  
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss">
+  .lists {
+    > :nth-child(1) {
+      background-color: aliceblue;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    > :nth-child(2) {
+      background-color: aliceblue;
+      padding: 2rem;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .content-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    h2 {
+      font-size: 22px;
+      padding-bottom: 10px;
+      color: var(--blue);
+
+      span {
+        font-size: 18px;
+      }
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 0.5rem;
+        display: flex;
+        gap: 15px;
+        span {
+          color: var(--brown);
+        }
+      }
+    }
+  }
+</style>

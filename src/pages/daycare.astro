@@ -1,0 +1,106 @@
+---
+import OtherClass from "../components/OtherClass.astro";
+import PageBanner from "../components/PageBanner.astro";
+import Section from "../components/Section.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import Art from "../components/svgs/Art.astro";
+---
+
+<Layout title="Extra-curricular-activities">
+  <PageBanner title="Day Care" quote="Self-discipline is self-caring." author="- M. Scott Peck"/>
+
+  <Section>
+    <div class="container">
+      <div class="course-content">
+        <div>
+          <h1 class="sub-title">Day Care in Bangalore</h1>
+          <p>
+            The demand for daycare schools is growing rapidly due to the gradual
+            transformation of the join family into a nuclear family. The
+            fast-paced life and the declining number of joint families certainly
+            make life difficult for parents of nuclear families, especially with
+            both parents working for a better future for their children. This
+            requirement has opened the door for Day Care in Bangalore. <br />
+            Siddhanta Intellectual School is the best Daycare centre in Bangalore
+            that ensures a healthy atmosphere for your children. Leaving your children
+            to us means assigning them caregivers who treat your children as their
+            own. We understand your concerns, and therefore you can always contact
+            us to keep your child informed. You can always contact your child by
+            phone or CCTV recordings. If you are looking for the best Day Care in
+            Bangalore, you should check out Siddhanta Intellectual School. We always
+            strive to live up to your expectations, and when you meet your child
+            as a caregiver, you will understand how strong we are at it.
+          </p>
+        </div>
+
+        <div>
+          <div class="sub-title">
+            What will your child learn at Siddhanta Intellectual School
+            
+
+          </div>
+
+          <p>
+            Our Day Care in Bangalore helps your child to learn the following skills:
+             
+          </p>
+          <ul>
+            <li><strong>Social Skills:</strong> Our Day Care centre helps your children develop early social skills that contribute to their social and emotional growth. Learning to interact with others is crucial, and the earlier a child begins to socialize, the easier it becomes.</li>
+          
+            <li><strong>Self-Assurance:</strong> Young children may experience separation anxiety. Siddhanta Intellectual School helps overcome this fear by providing daily contact with other children, fostering a sense of security and self-assurance.</li>
+          
+            <li><strong>Cognitive Skills:</strong> Children benefit cognitively from educational activities and games offered by our Day Care in Bangalore. They learn language skills, colors, numbers, and develop thinking skills through play, fostering curiosity and exploration.</li>
+          
+            <li><strong>Discipline:</strong> The structured environment of our Day Care, with fixed schedules for snacks, naps, and activities, provides children with a sense of stability and kindness every day. This routine instills discipline in their daily activities and a sense of togetherness for emotional security.</li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <OtherClass />
+</Layout>
+
+<style lang="scss">
+  .activities {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    place-content: center !important;
+
+    row-gap: 2rem;
+    column-gap: 3rem;
+
+    @media screen and (max-width: 991px) {
+      grid-template-columns: repeat(3, 200px);
+    }
+
+    @media screen and (max-width: 500px) {
+      grid-template-columns: repeat(1, 300px);
+      .cards {
+        height: auto !important;
+      }
+    }
+
+    > div {
+      background-color: rgb(234, 235, 235);
+      width: 100%;
+      height: 230px;
+
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      gap: 0.7rem;
+
+      img {
+        max-width: 70px;
+      }
+    }
+  }
+</style>

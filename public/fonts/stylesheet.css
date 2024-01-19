@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'New York';
+    src: url('NewYork-Regular.woff2') format('woff2'),
+        url('NewYork-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York';
+    src: url('NewYorkMedium-Bold.woff2') format('woff2'),
+        url('NewYorkMedium-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York';
+    src: url('NewYorkMedium-Regular.woff2') format('woff2'),
+        url('NewYorkMedium-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
