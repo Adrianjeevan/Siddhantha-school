@@ -1,5 +1,6 @@
 ---
 import Section from "./Section.astro";
+import Button from "./Button.astro";
 
 ---
 
@@ -8,10 +9,12 @@ import Section from "./Section.astro";
 <footer>
     <div class="adm">
         <div class="container">
-         <div class="d-flex justify-content-end ">
+         <div class="d-flex  ">
             <div class="text-center">
-                <h5 class="pb-4">ADMISSIONS OPEN 2024 - 2025 </h5>
-                <div class="d-flex justify-content-center"><a href="" class="btn">Register Now</a></div>
+                <h6 class="pb-4">Admissions Open 2024 - 2025 </h6>
+                <div class="d-flex justify-content-center">
+                    <Button title="Register Now" link="/admission" variant="normal"/>
+                </div>
             </div>
          </div>
         </div>
@@ -90,8 +93,8 @@ footer{
         background-color: white;
         padding: 2rem 0;
 
-        h5{
-            font-size: clamp(22px,4vw,30px);
+        h6{
+            font-size: clamp(16px,4vw,20px);
             font-weight: 600;
         }
 
@@ -101,6 +104,14 @@ footer{
             // display: flex;
             display: block;
             justify-content: center;
+        }
+
+        div{
+            justify-content: flex-end;
+
+            @media screen and (max-width:991px) {
+                justify-content:center;
+            }
         }
     }
 

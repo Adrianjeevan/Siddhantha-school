@@ -194,6 +194,11 @@ var change = false;
 
 .vision-row{
   justify-content: space-around;
+  height: 480px;
+
+  @media screen and (max-width:991px) {
+    height: auto;
+  }
 
   >:nth-child(1){
     display: flex;
@@ -316,6 +321,7 @@ var change = false;
     span{
       font-size: 22px;
       transition: all 0.5s ease ;
+      cursor: pointer;
 
     }
   }
