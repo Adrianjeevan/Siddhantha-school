@@ -27,7 +27,7 @@ var change = false;
   
   <Section>
     <div class="container">
-      <div class="row vision-row">
+      <div class="row vision-row gy-4">
         <div class="col-lg-3">
           <div class="nav-vision">
             <span> Our Vision</span>
@@ -122,7 +122,7 @@ var change = false;
 
   <Founders />
 
-  <Section>
+  <Section style="padding-bottom:0;">
 
     <SectionTitle title=" Cultivating Values and Skills for the Modern World" subtitle="At Siddhanta Intellectual School, education isn't just about absorbing information from textbooks; it's about actively engaging with the world. Our approach to learning centers around experiential education, where students are encouraged to immerse themselves in hands-on, real-world experiences. This dynamic learning process is designed to ignite curiosity, spark creativity, and foster a deep understanding of the subjects and life itself." style="text-align:center;"   />
    <div class="container">
@@ -148,7 +148,7 @@ var change = false;
 
   </Section>
 
-  <Section>
+  <Section style="padding:2rem 0 2rem 0 ;">
     <SectionTitle title=" We are glad to introduce our professional staffs" style="text-align:center;"  />
 
     <div class="container">
@@ -162,18 +162,24 @@ var change = false;
 </Layout>
 
 <style lang="scss">
-  
+
   .staff{
     width: 80%;
     margin: 0 auto;
     border: solid var(--dark-blue) 10px;
   }
   .big-para{
-    font-size: clamp(23px, 4vw, 26px);
+    font-size: clamp(16px, 4vw, 26px);
     text-align: center;
     width: 60%;
     margin: 0 auto;
     padding: 3rem 0;
+
+
+    @media screen and (max-width:991px) {
+      width: 100%;
+      padding: 0;
+    }
   }
   .about-banner {
     height: 80vh;
@@ -240,7 +246,7 @@ var change = false;
 
     .vision-slide{
       width: 100% !important;
-      height: 480px;
+      // height: 480px;
       margin: 0 auto;
       overflow: hidden !important;
     }
@@ -259,17 +265,17 @@ var change = false;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      // transition: all 0.5s ease;
+      transition: all 0.5s ease;
 
       // *{
       //   transition: all 0.5s ease;
       // }
 
       &:hover {
-        padding: 1.5rem;
-       p{
-        font-size: 22px;
-       }
+        // padding: 1.5rem;
+      //  p{
+      //   font-size: 22px;
+      //  }
        img {
         max-width: 70px;
         
@@ -292,9 +298,25 @@ var change = false;
     flex-direction: column;
     transition: all 0.5s ease ;
 
-    span{
-      font-size: 35px ;
+    @media screen and (max-width:991px) {
+      flex-direction: row ;
+      gap: 1rem;
+    }
+    @media screen and (max-width:500px) {
+      flex-direction: row ;
+      gap: 1rem;
+
+      span{
+      font-size: 16px !important;
       transition: all 0.5s ease ;
+
+    }
+    }
+
+    span{
+      font-size: 22px;
+      transition: all 0.5s ease ;
+
     }
   }
 

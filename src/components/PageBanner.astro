@@ -52,13 +52,15 @@ const { title, secondtitle, quote, author, isquote, image } = Astro.props;
 <style lang="scss">
   .pagebanner {
     margin-top:var(--header-height);
-    height: 50vh;
+    // height: 50vh;
 
     // display: flex;
     gap: 10px;
     align-items: center;
     padding: 2rem 0;
     justify-content: space-around;
+
+    
 
     a {
       font-size: 14px;
@@ -110,9 +112,13 @@ const { title, secondtitle, quote, author, isquote, image } = Astro.props;
 
       img{
         width: 100%;
-        height: 100%;
+        height: 460px;
         
         object-fit: contain;
+
+        @media screen and (max-width:991px) {
+          height: 300px;
+    }
       }
     }
   }

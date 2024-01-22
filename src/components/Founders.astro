@@ -6,9 +6,9 @@ import SectionTitle from "./SectionTitle.astro";
 <Section style="">
   <SectionTitle title="Founders Message" classes="text-center" />
   <div class="container">
-    <div class="row founder">
+    <div class="row founder gy-4">
       <div class="col-lg-5">
-        <img src="/images/founder-bg.svg" alt="" class="f-bg">
+        <img src="/images/sis.png" alt="" class="f-bg">
         <img
           src="/images/anand.png"
           class="anand animate__animated  animate__pulse "
@@ -64,7 +64,7 @@ import SectionTitle from "./SectionTitle.astro";
 .founder{
     justify-content: center;
     transition: all 0.5s ease;
-    height: 600px;
+    // height: 600px;
    
     
     
@@ -74,11 +74,21 @@ import SectionTitle from "./SectionTitle.astro";
         justify-content: center;
         align-items: center;
         height: 300px;
+
+        @media screen and (max-width:500px) {
+              
+            height: 200px;
+            }
         img{
             max-width: 300px;
             height: 300px;
             margin: 0 auto;
             transition: all 0.5s ease-in-out;
+
+            @media screen and (max-width:500px) {
+              max-width: 200px;
+            height: 200px;
+            }
 
         }
         .f-bg{
@@ -87,7 +97,7 @@ import SectionTitle from "./SectionTitle.astro";
             left: 50%;
             transform: translate(-50%,-50%);
             z-index: -1;
-            max-width: 600px;
+           
             fill: red;
         }
     }
