@@ -6,10 +6,12 @@ import FancyButton from "./FancyButton.astro";
 ---
 
 <div class="hero">
+
   <div class="hero-slider owl-carousel owl-theme">
     <div class="hero-slide">
-      <img src="/images/police.png" alt="" class="second-img" />
-      <div class="container">
+      <img src="/images/homebanner/001.jpg" alt="sidddhantha intellectual school" class="second-img" />
+      <div class="container ">
+       <div class="row-wrapper">
         <div class="row">
           <div class="col-lg-5">
             <div class="contents">
@@ -23,64 +25,69 @@ import FancyButton from "./FancyButton.astro";
           </div>
 
           <div class="col-lg-5">
-            <div class="square linkedin">
-              <span><img src="/images/home-banner.png" alt="" /></span>
-              <span></span>
-              <span></span>
-            
-            </div>
+       
 
             
           </div>
         </div>
+       </div>
       </div>
     </div>
+    
     <div class="hero-slide">
-      <div class="container">
+      <img src="/images/homebanner/002.jpg" alt="sidddhantha intellectual school" class="second-img" />
+      <div class="container ">
+       <div class="row-wrapper">
         <div class="row">
           <div class="col-lg-5">
             <div class="contents">
               <h3 class="banner-title">
-                <span>Explore, Enrich, Excel</span>
-                <br /> Navigating Futures through Our Dynamic Courses!
+                <span>Unlock Your Future</span>
+                <br /> Admission Open for a World of Opportunities!
               </h3>
+
               <FancyButton />
             </div>
           </div>
+
           <div class="col-lg-5">
-            <div class="square linkedin">
-              <span></span>
-              <span></span>
-              <span></span>
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-slide">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="contents">
-              <h3 class="banner-title">
-                <span>Unlocking Potential, Igniting Minds</span>
-                <br /> Admission open for 2024 - 2025
-              </h3>
-              <FancyButton />
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="square linkedin">
-              <span><img src="/images/home-banner.png" alt="" /></span>
-              <span></span>
-              <span></span>
+          
             
-            </div>
           </div>
         </div>
+       </div>
       </div>
     </div>
+    
+    <div class="hero-slide">
+      <img src="/images/homebanner/003.jpg" alt="sidddhantha intellectual school" class="second-img" />
+      <div class="container ">
+       <div class="row-wrapper">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="contents">
+              <h3 class="banner-title">
+                <span>Unlock Your Future</span>
+                <br /> Admission Open for a World of Opportunities!
+              </h3>
+
+              <FancyButton />
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+          
+
+            
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+    
+
+
+
   </div>
 
   <HighlightsBanner />
@@ -93,20 +100,22 @@ import FancyButton from "./FancyButton.astro";
     line-height: 1.2;
     font-family: "New York";
     font-weight: 700;
-    color: black;
+   
+    color: rgb(198, 196, 196); 
 
     span {
-      color: var(--dark-blue);
+      color: white;
       font-size: clamp(35px, 4vw, 40px);
       
     }
   }
   .hero {
-    height: 90vh;
+    height: 85vh;
+    margin-bottom: 2rem;
     // background-color: orange;
     position: relative;
     margin-top:var(--header-height);
-    padding: 4rem 0;
+    // padding: 4rem 0 0 0;
 
     @media screen and (max-width: 991px) {
       height: auto;
@@ -115,36 +124,54 @@ import FancyButton from "./FancyButton.astro";
 
     .hero-slider {
       width: 100%;
-      height: 100%;
+      height: 85vh;
     }
+
+    
     .hero-slide {
       width: 100%;
-      height: 100%;
+      height: 85vh;
       position: relative;
 
-      height: 100%;
+      .row-wrapper{
+        height: 60vh;
+        width: 100%;
+        padding-top: 4rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+      }
+
+      
 
 
       .second-img {
-        display: none;
-
-        @media screen and (max-width:1080px) {
-          width: 100%;
-        height: 100%;
-        display: block;
+        // display: none;
+        width: 100%;
+        height: 100% !important;
+        filter:brightness(30%) ;
+        
         position: absolute;
         z-index: -1;
         object-fit: cover;
         top: 0;
         left: 0;
+
+        @media screen and (max-width:1080px) {
+        
         }
         // filter: brightness(50%);
       }
 
       .row {
         justify-content: space-around;
-        // background-color: yellow;
-        height: 60vh;
+        height: 100%;
+        width: 100%;
+        // padding-top: 10rem;
+       
+     
 
         > :nth-child(2) {
           // background-color: red;
@@ -180,6 +207,9 @@ import FancyButton from "./FancyButton.astro";
 
       // align-items: flex-start;
       justify-content: center;
+      h3{
+        
+      }
     }
   }
 
@@ -297,7 +327,7 @@ import FancyButton from "./FancyButton.astro";
   .content {
     position: relative;
     padding: 40px 60px;
-    color: black;
+    // color: black;
     text-align: center;
     transition: 0.5s;
     z-index: 1000;

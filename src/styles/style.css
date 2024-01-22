@@ -50,6 +50,52 @@
   fill: red;
 }
 
+.owl-carousel {
+  position: relative;
+}
+.owl-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  padding: 0 3rem;
+  justify-content: space-between;
+}
+@media screen and (max-width: 590px) {
+  .owl-carousel .owl-nav {
+    display: none;
+  }
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  border-radius: 50px;
+  color: white !important;
+  font-size: 35px;
+  background-color: rgba(22, 181, 229, 0.512) !important;
+  position: relative;
+}
+.owl-carousel .owl-dots {
+  display: block;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+}
+.owl-carousel .owl-dots .owl-dot span {
+  background-color: var(--blue);
+}
+.owl-carousel .owl-dots .active span {
+  background-color: var(--dark-blue) !important;
+}
+
 .jello {
   animation-name: jello;
   transform-origin: center;

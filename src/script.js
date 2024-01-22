@@ -1,7 +1,7 @@
 import { tns } from "tiny-slider/src/tiny-slider";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 import { Fancybox } from "@fancyapps/ui";
 
@@ -38,8 +38,8 @@ if (document.querySelector(".events-slider")) {
     edgePadding: 0,
     gutter: 0,
     mouseDrag: true,
-    
-    controlsContainer:".event-controls", 
+
+    controlsContainer: ".event-controls",
     autoplayButton: false,
     autoplayButtonOutput: false,
     nav: false,
@@ -70,10 +70,10 @@ $(document).ready(function () {
     items: 1,
     dots: true,
     navText: ["<", ">"],
-
+    
     margin: 0,
-    autoplay: true,
-    nav: false,
+    autoplay: false,
+    nav: true,
   });
 
   heroSlider.on("changed.owl.carousel", function (event) {
@@ -213,7 +213,7 @@ if (document.querySelector(".facility-slider")) {
 }
 
 if (document.querySelector(".gallery-slider")) {
-  var slider = tns({
+  var galleryslider = tns({
     container: ".gallery-slider",
 
     slideBy: 1,
@@ -239,13 +239,29 @@ if (document.querySelector(".gallery-slider")) {
       },
       700: {
         gutter: 30,
-        items: 2,
+        items: 1,
       },
       900: {
-        items: 3,
+        items: 1,
         gutter: 10,
       },
     },
+  });
+
+  galleryslider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".gallery-slider .tns-slide-active .slide-link");
+
+    // GSAP animation
+    gsap.from(".gallery-slider .tns-slide-active .slide-link", {
+     
+      y: 10,
+      stagger: 0.2,
+      opacity: 0,
+      duration: 0.7 ,
+      scale: 0.9,
+      ease: "power4.inOut",
+    });
   });
 }
 
@@ -277,7 +293,7 @@ if (document.querySelector(".journey-one")) {
       },
       700: {
         gutter: 30,
-        items: 2,
+        items: 1,
       },
       900: {
         items: 1,
@@ -357,7 +373,7 @@ if (document.querySelector(".testimonials")) {
         items: 2,
       },
       900: {
-        items: 1,
+        items: 3,
         gutter: 10,
       },
     },

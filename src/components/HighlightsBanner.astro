@@ -6,18 +6,21 @@ import SectionTitle from "./SectionTitle.astro";
   <div class="container">
     <div class="wrapper text-white">
       <div class="d-flex">
-        <img src="/images/graduated.png" alt="Siddhantha Intellectual school" />
+     <div class="icons">
+      <img src="/images/BEST-INDUSTRY-TEACHERS.png" alt="Siddhantha Intellectual school" />
+     </div>
         <h5>BEST INDUSTRY TEACHERS</h5>
       </div>
       <div class="d-flex">
-        <img
-          src="/images/graduated.png"
-          alt="Siddhantha Intellectual school"
-        />
+        <div class="icons">
+          <img src="/images/BEST-INDUSTRY-campus.png" alt="Siddhantha Intellectual school" />
+         </div>
         <h5>BEST INDUSTRY CAMPUS</h5>
       </div>
       <div class="d-flex">
-        <img src="/images/graduated.png" alt="Siddhantha Intellectual school" />
+        <div class="icons">
+          <img src="/images/BEST-INDUSTRY-EDUCATION.png" alt="Siddhantha Intellectual school" />
+         </div>
         <h5>BEST INDUSTRY EDUCATION</h5>
       </div>
     </div>
@@ -41,6 +44,8 @@ import SectionTitle from "./SectionTitle.astro";
       display: grid;
       column-gap: 2rem;
       grid-template-columns: repeat(3, auto);
+      place-content: center;
+      place-items: center;
 
       @media screen and (max-width: 991px) {
         grid-template-columns: repeat(1, auto);
@@ -52,8 +57,18 @@ import SectionTitle from "./SectionTitle.astro";
           width: 80%;
           gap: 2rem;
           margin: 0 auto;
+
+          
         }
       }
+
+      .icons{
+            background-color: rgba(255, 255, 255, 0.469);
+            padding: 1rem; 
+            backdrop-filter: blur(30px);
+          }
+
+          
       img {
         max-width: 40px;
         object-fit: contain;

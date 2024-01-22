@@ -59,12 +59,13 @@ const { date, month, name, time, location, image, link } = Astro.props;
     
     backdrop-filter: blur(30px);
     
-    background-color:#ffffff;
+    background-color:rgba(9, 142, 186, 0.201);
     gap: 1rem;
     // border: solid 2px var(--blue);
-    border: solid 2px var(--dark-blue);
+    // border: solid 2px var(--dark-blue);
     padding: 2rem;
     transition: all 0.8s ease;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
 
    *{
     transition: all 0.8s ease !important;
@@ -72,10 +73,11 @@ const { date, month, name, time, location, image, link } = Astro.props;
 
 
     &:hover{
-      border: solid 2px var(--dark-blue);
+      // border: solid 2px var(--dark-blue);
       transition: all 0.5s ease;
       background-color:#c9e4f56d;
       backdrop-filter: blur(30px);
+      box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px  !important;  
       
 
       

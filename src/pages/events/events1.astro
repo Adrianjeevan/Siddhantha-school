@@ -7,7 +7,7 @@ import Section from "../../components/Section.astro";
 const names = "Event1";
 const date = "20-12-23";
 const time = "10:00 : AM";
-const image = "/images/police.png";
+const image = "/images/homebanner/002.jpg";
 const description = names;
 const upcoming = true;
 
@@ -26,7 +26,7 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
 ---
 
 <Layout title="dav">
-  <PageBanner title="Events" secondtitle={names} />
+  <PageBanner title="Events" secondtitle={names} image={image} />
   <Section>
     <div class="container">
       <!-- <div class="events-wrapper">
@@ -85,7 +85,7 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
 
        
         <div class="d-flex flex-column">
-          <SectionTitle title={names} classes="text-center"/>
+          <SectionTitle title={names} classes="text-center" style="padding-bottom:1rem; "/>
           <p class="sub-title text-center"><span>Date:</span> {date}</p>
           
         </div>
@@ -101,13 +101,19 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
                evntimg.map((items)=> {
                 return (
                 <div>
-                  <img src={items.one } alt="" />
+                 <a href={items.one }  data-fancybox="gallery" >
+                  <img src={items.one } alt="Siddhantha intellectual School" />
+                  </a>
                 </div>
                 <div>
-                  <img src={items.two } alt="" />
+                <a href={items.two }>
+                  <img src={items.two } alt="Siddhantha intellectual School"  data-fancybox="gallery" />
+                  </a>
                 </div> 
                 <div>
-                  <img src={items.three } alt="" />
+                  <a href={items.three }  data-fancybox="gallery">
+                    <img src={items.three } alt="Siddhantha intellectual School" />
+                    </a>
                 </div> 
                 )
                })
@@ -253,12 +259,15 @@ import EventSingleCard from "../../components/EventSingleCard.astro";
   .aftr-img{
     display: grid;
     
- grid-template-columns: repeat(3 , 500px);
+ grid-template-columns: repeat(3 , 300px);
  place-items: center;
+ gap: 2rem;
  place-content: center;
     img {
       width: 100% !important;
+      object-fit: cover;
       height: 400px;
+
     }
   }
 </style>
