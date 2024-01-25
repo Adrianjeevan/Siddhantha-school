@@ -165,9 +165,45 @@ gsap.from(".highlight-slide", {
     ease: "power4.inOut",
   });
 
+  gsap.from(".pagebanner .left", {
+    scrollTrigger: {
+      trigger: ".pagebanner .left",
+      start: "top 80%" ,
   
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+    x: -20,
+    
+    opacity: 0,
+    
+    duration:1,
+    delay:0.1,
+  
+    ease: "power4.inOut",
+  });
 
+
+ 
+
+  gsap.from(".pagebanner .right", {
+    scrollTrigger: {
+      trigger: ".pagebanner .right",
+      start: "top 80%" ,
   
+      toggleActions: "play none none reverse",
+      // markers: true,
+    },
+    x: 20,
+    
+    opacity: 0,
+    
+    duration:1,
+    delay:0.1,
+  
+    ease: "power4.inOut",
+  });
+
 
 
 
