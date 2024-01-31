@@ -2,7 +2,8 @@
 import Section from "./Section.astro";
 import SectionTitle from "./SectionTitle.astro";
 import Button from "./Button.astro";
-import Whyus from "./svgs/whyus.astro";
+import Whyuss from "./svgs/whyus.astro" ;
+import Whymobile from "./svgs/whymobile.astro";
 
 
 ---
@@ -13,7 +14,13 @@ import Whyus from "./svgs/whyus.astro";
        <SectionTitle title="Why Choose Siddhanta?" classes="text-center"/>
 
       <div class="d-flex justify-content-center">
-       <Whyus/>
+       <Whyuss />
+
+       <div class="mobile-only">
+        <Whymobile />
+       </div>
+
+
         
       </div>     
     </div>
@@ -21,6 +28,13 @@ import Whyus from "./svgs/whyus.astro";
 
 
 <style lang="scss">
+    .mobile-only{
+        display: none;
+
+        @media screen and (max-width: 500px) {
+            display: block ;
+        }
+    }
   .why-us{
     display: grid;
     padding-bottom: 4rem;

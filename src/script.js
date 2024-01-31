@@ -7,6 +7,10 @@ import { Fancybox } from "@fancyapps/ui";
 
 import { Carousel } from "@fancyapps/ui";
 
+Fancybox.bind();
+
+ 
+
 let headerHeight = document.querySelector("header").offsetHeight;
 
 // set css variable header-height to the height of <header>
@@ -68,11 +72,13 @@ $(document).ready(function () {
   heroSlider.owlCarousel({
     loop: true,
     items: 1,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
     dots: true,
     navText: ["<", ">"],
-    
+
     margin: 0,
-    autoplay: false,
+    autoplay: true,
     nav: true,
   });
 
@@ -173,7 +179,7 @@ if (document.querySelector(".safety-slider")) {
   });
 }
 
-Fancybox.bind();
+
 
 if (document.querySelector(".facility-slider")) {
   var slider = tns({
@@ -254,11 +260,10 @@ if (document.querySelector(".gallery-slider")) {
 
     // GSAP animation
     gsap.from(".gallery-slider .tns-slide-active .slide-link", {
-     
       y: 10,
       stagger: 0.2,
       opacity: 0,
-      duration: 0.7 ,
+      duration: 0.7,
       scale: 0.9,
       ease: "power4.inOut",
     });
@@ -437,3 +442,36 @@ $(document).ready(function () {
 
 //   ease: "power4.inOut",
 // });
+var bigVideos = document.querySelectorAll(".bigvideo");
+
+bigVideos.forEach(function (videos) {
+  var container = videos.closest(".video-wrapper");
+  var image = container.querySelector(".imgs");
+
+  //   container.addEventListener("click", function () {
+  //     image.style.display = "none";
+  //     if (videos.currentTime === 0) {
+  //       videos.play();
+  //     } else {
+  //       videos.pause();
+  //     }
+  //   });
+
+  container.addEventListener("click", function () {
+    if (videos.paused || videos.ended || videos.currentTime === 0) {
+      // If video is paused or ended, play it
+      image.style.display = "none";
+      videos.play();
+    } else if (videos.currentTime !== 0 || videos.paused) {
+      videos.pause();
+    }
+  });
+
+  //   container.addEventListener('mouseleave', function() {
+  //     // image.style.display = 'block';
+  //     videos.pause();
+  //     // videos.currentTime = 0;
+  //     // videos.play();
+  //   });
+});
+

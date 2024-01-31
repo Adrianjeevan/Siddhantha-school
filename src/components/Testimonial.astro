@@ -21,7 +21,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
           <div class="wrapper">
             <!-- <img src="/images/tb1.png" alt=""> -->
             <div class="overlay">
-              <img src="" alt="" />
+              <img src="/images/Women.png" alt="" />
             </div>
             <div class="content">
               <div></div>
@@ -30,8 +30,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
                 I am so pleased with how my child has progressed. Thank you for
                 your help, my child is very happy. My child always talks about
                 school and the work he is doing, he is getting on really well.
-                Very good teachers and really helpful, my son has learnt a lot
-                of things.
+                Very good teachers and really helpful,
               </p>
               <div>
                 <img
@@ -47,17 +46,35 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
           <div class="wrapper">
             <!-- <img src="/images/tb1.png" alt=""> -->
             <div class="overlay">
-              <img src="" alt="" />
+              <img src="/images/Women.png" alt="" />
             </div>
             <div class="content">
               <div></div>
-              <div class="name">Vinayashree G</div>
+              <div class="name">Neha Barnwal</div>
               <p>
-                I am so pleased with how my child has progressed. Thank you for
-                your help, my child is very happy. My child always talks about
-                school and the work he is doing, he is getting on really well.
-                Very good teachers and really helpful, my son has learnt a lot
-                of things.
+                Good school, Very good teachers. My son has learnt new things. He loves to go school as teachers are genuinely taking care of each one of them.
+              </p>
+              <div>
+                <img
+                  src="/images/quote (1).png"
+                  alt=""
+                  style="max-width: 50px;"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="wrapper">
+            <!-- <img src="/images/tb1.png" alt=""> -->  
+            <div class="overlay">
+              <img src="/images/man.png" alt="" />
+            </div>
+            <div class="content">
+              <div></div>
+              <div class="name">Praveen</div>
+              <p>
+                Best school in this area, my son studied in nursery and also opted day care...day care and nursery teachers were really good and caring to students.
               </p>
               <div>
                 <img
@@ -73,43 +90,13 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
           <div class="wrapper">
             <!-- <img src="/images/tb1.png" alt=""> -->
             <div class="overlay">
-              <img src="" alt="" />
+              <img src="/images/man.png" alt="" />
             </div>
             <div class="content">
               <div></div>
-              <div class="name">Vinayashree G</div>
+              <div class="name">Jay Prakash</div>
               <p>
-                I am so pleased with how my child has progressed. Thank you for
-                your help, my child is very happy. My child always talks about
-                school and the work he is doing, he is getting on really well.
-                Very good teachers and really helpful, my son has learnt a lot
-                of things.
-              </p>
-              <div>
-                <img
-                  src="/images/quote (1).png"
-                  alt=""
-                  style="max-width: 50px;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="wrapper">
-            <!-- <img src="/images/tb1.png" alt=""> -->
-            <div class="overlay">
-              <img src="" alt="" />
-            </div>
-            <div class="content">
-              <div></div>
-              <div class="name">Vinayashree G</div>
-              <p>
-                I am so pleased with how my child has progressed. Thank you for
-                your help, my child is very happy. My child always talks about
-                school and the work he is doing, he is getting on really well.
-                Very good teachers and really helpful, my son has learnt a lot
-                of things.
+                My daughter is in LKG. The primary teacher understands her ability and provide right and timely guidance to improve her skills. Even though, we parents are involved in assisting her during the class but the improvement being shown in her after she has joined the school is on the positive side.
               </p>
               <div>
                 <img
@@ -182,7 +169,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
         margin: 0 auto;
         border-radius: 10px;
 
-        height: 100%;
+        height: 450px;
         display: block !important;
         transition: all 0.5s ease;
         box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
@@ -191,16 +178,35 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
         &:hover {
           background-color: rgba(9, 142, 186, 0.201);
           box-shadow: rgba(137, 215, 243, 0.655) 0px 25px 20px -20px;
-        }
 
-        .overlay {
-          position: absolute;
+          .overlay{
+            border: solid  var(--dark-blue);
+            display: block;
+            position: absolute;
           top: -3rem;
           width: 70px;
           height: 70px;
           border-radius: 70px;
-          background-color: red;
+          transition: all 0.5s ease;
+          border: solid 2px var(--blue);
+          backdrop-filter: blur(30px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          
+ 
           box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+          img{
+            width: 45px;
+
+          }
+          }
+        }
+
+        .overlay {
+         display: none;
         }
 
         .content {
@@ -208,9 +214,11 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
           width: 100%;
           display: flex;
           flex-direction: column;
+          
+          padding-top: 2rem;
           // justify-content: center;
           align-items: center;
-          // gap: 3rem;
+          gap: 1rem;
 
           .name {
             font-size: clamp(22px, 4vw, 30px);
@@ -220,7 +228,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
 
           p {
             font-size: 16px;
-            width: 80%;
+            width: 100%;
             text-align: center;
           }
         }

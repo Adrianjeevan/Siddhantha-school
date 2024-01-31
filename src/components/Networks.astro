@@ -9,7 +9,7 @@ import SectionTitle from "./SectionTitle.astro";
       title="Our Network of Schools in Bengaluru"
       classes="text-center pb-4"
     />
-    <p class="para text-center pb-5 w-50">
+    <p class="para text-center pb-5 ">
       Siddhanta Intellectual School is part of a broader educational network
       that includes other esteemed institutions in Bengaluru. These schools
       share our commitment to quality education and holistic development. They
@@ -47,6 +47,12 @@ import SectionTitle from "./SectionTitle.astro";
       justify-content: center;
       gap: 3rem;
       // flex-direction: column;
+      @media screen and (max-width:500px) {
+  flex-direction: column ;
+  gap: 2rem;
+ }
+
+
       
 
       
@@ -56,11 +62,16 @@ import SectionTitle from "./SectionTitle.astro";
 
       img{
         // // width: 70%;
-        height: 120px;
         
+        height: 120px;
         width: 200px;
         object-fit: contain;
         margin: 0 auto !important;
+
+ @media screen and (max-width:500px) {
+  width: 200px;
+  height: 100px;
+ }
       }
     }
   }
