@@ -4,48 +4,43 @@
 
 <header id="header" class="animate__animated">
   <div class="head-banner">
-    <a href="">Admission open for 2024 - 2025 </a>
+    <a href="">Admission open for 2024 - 2025</a>
   </div>
   <div class="container">
-    
     <div class="row align-items-center">
-      <div class="col-lg-2 d-flex justify-content-between ">
-        <div class="d-flex  w-100 align-items-center justify-content-between">
+      <div class="col-lg-2 d-flex justify-content-between">
+        <div class="d-flex w-100 align-items-center justify-content-between">
           <div>
             <a href="/">
               <img src="/images/logo.svg" class="logo" alt="Logo" /></a
             >
-
-           
           </div>
 
           <div class="menu-btn">
-            <img src="/images/menu (11).png" alt="" style="max-width: 40px;" class="menubar">
+            <img
+              src="/images/menu (11).png"
+              alt=""
+              style="max-width: 40px;"
+              class="menubar"
+            />
           </div>
         </div>
-
-       
-
       </div>
 
       <div class="col-lg-8">
         <div class="">
-         
-  
-        
-  
           <ul class="navigation nav">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li>
               <a href="#" class="drop">Classes</a>
-  
+
               <div class="submenu class">
                 <a href="/daycare">Day care</a>
                 <a href="/nursery">Nursery,LKG,UKG</a>
                 <a href="/grade1-5">Grade 1- 5</a>
                 <a href="/grade6-7">Grade 6 - 7</a>
-                <a href="/grade7-9">Grade 7 - 9</a>
+                <a href="/grade7-9">Grade 8 - 9</a>
               </div>
             </li>
             <li><a href="/admission">Admission</a></li>
@@ -54,16 +49,11 @@
             <li><a href="/events">Events</a></li>
             <li><a href="/contact">contact</a></li>
           </ul>
-
-         
-
-
-
         </div>
       </div>
 
       <div class="col-lg-2 d-flex gap-3 justify-content-end align-items-center">
-        <div class="d-flex gap-3 justify-content-end ">
+        <div class="d-flex gap-3 justify-content-end">
           <a
             href="https://www.facebook.com/profile.php?id=61553800725030"
             target="_blank"
@@ -99,10 +89,8 @@
             </svg>
           </a>
         </div>
-        <a href="" class="btn" >Call us </a>
+        <a href="tel:+9196112 25806" class="btn">Call us</a>
       </div>
-
-      
     </div>
   </div>
 </header>
@@ -110,24 +98,21 @@
 <div class="mobile-menu" id="menus">
   <div class="wrapper">
     <div class="container">
-      <img src="/images/close.png" alt="" id="close" />
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/admission">Admission</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/amenities">Amenities</a></li>
         <li class="submenu-wrapper">
-          <div class="d-flex align-items-center gap-4">
-            Classes <span> &#x25BC;</span>
-          </div>
+         
 
-          <ul class="subs pt-3 pb-3">
-            <li class=""><a href="/nursery">Nursery,LKG,UKG</a></li>
-            <li class=""><a href="/grade1-5">Grade 1 - 5</a></li>
-            <li class=""><a href="/grade6-8">Grade 6 - 8</a></li>
-            <li class=""><a href="/grade9-10">Grade 9 - 10</a></li>
-            <li class=""><a href="/grade11-12">Grade 11 - 12</a></li>
-            <li class=""><a href="/extra-curricular">Extra-Curricular</a></li>
+          <ul class="subs">
+            <li class=""><a href="/daycare">Day care</a></li>
+            <li class=""> <a href="/nursery">Nursery,LKG,UKG</a></li>
+            <li class="">  <a href="/grade1-5">Grade 1- 5</a></li>
+            <li class="">  <a href="/grade6-7">Grade 6 - 7</a></li>
+            <li class=""> <a href="/grade7-9">Grade 8 - 9</a></li>
+           
           </ul>
         </li>
 
@@ -140,66 +125,45 @@
 </div>
 
 <script is:inline>
-  const header = document.getElementById("header");
-
-  let lastScrollPosition = 0;
-
-  window.addEventListener("load", () => {
-    if (window.location.pathname === "/") {
-      document.querySelector(".m-icon").src = "/images/new-menu.png";
-    } else {
-      document.querySelector(".m-icon").src = "/images/menu.png";
-    }
-  });
-
-  window.addEventListener("scroll", () => {
-    const currentScrollPosition = window.scrollY;
-
-    if (currentScrollPosition > lastScrollPosition) {
-      // header.classList.add("animate__fadeInDown");
-      if (window.location.pathname === "/") {
-        document.querySelector(".m-icon").src = "/images/menu.png";
-      }
-    } else {
-      // header.classList.remove("animate__fadeInDown");
-      if (window.location.pathname === "/") {
-        document.querySelector(".m-icon").src = "/images/new-menu.png";
-      } else {
-        document.querySelector(".m-icon").src = "/images/menu.png";
-      }
-    }
-
-    lastScrollPosition = currentScrollPosition;
-  });
-
-  window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    header.classList.add("animate__fadeInDown", window.scrollY < 0);
-
-    header.classList.toggle("sticky", window.scrollY > 0);
-  });
-
   const buttons = document.getElementById("menu-btn");
   const headers = document.getElementById("header");
   const menu = document.getElementById("menus");
-  const close = document.getElementById("close");
+  const bar = document.querySelector(".menubar");
 
-  buttons.addEventListener("click", function () {
+  document.querySelector(".menubar").src = "/images/menu (11).png";
+
+  bar.addEventListener("click", function () {
     headers.classList.toggle("active");
     menu.classList.toggle("left");
+
+    if (headers.classList.contains("active")) {
+      bar.src = "/images/close.png";
+    } else {
+      bar.src = "/images/menu (11).png";
+    }
   });
 
-  close.addEventListener("click", function () {
-    headers.classList.toggle("active");
-    menu.classList.toggle("left");
-  });
+  // menu.addEventListener("click", function () {
+  //   headers.classList.remove("active");
+  //   menu.classList.remove("left");
+  //   bar.src = "/images/menu (11).png";
+  // });
 
-  const sub = document.querySelector(".submenu-wrapper");
-  const subs = document.querySelector(".subs");
+  // menu.addEventListener('click', function() {
+  //   headers.classList.toggle('active');
+  //   menu.classList.toggle('left');
 
-  sub.addEventListener("click", () => {
-    subs.classList.toggle("view");
-  });
+  //   if (headers.classList.contains('active')) {
+  //   //   headers.style.backgroundColor = '#fff';
+  //     document.querySelector('.logo').src = '/images/logo-white.png';
+  //     document.querySelector('.menubar').src = '/images/close.png';
+  //   } else {
+  //   //   headers.style.backgroundColor = '#fff';
+  //     document.querySelector('.logo').src = '/images/logo.png';
+  //     document.querySelector('.menubar').src = '/images/menu.png' ;
+  //   }
+
+  // });
 </script>
 
 <style lang="scss">
@@ -210,105 +174,97 @@
     left: 0;
     width: 100%;
     z-index: 9;
-   
+
     // padding: 1rem 0;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
-.head-banner{
-  background-color: var(--dark-blue);
-  padding: 0.4rem 0;
-  text-align: center;
-  color: white;
+  .head-banner {
+    background-color: var(--dark-blue);
+    padding: 0.4rem 0;
+    text-align: center;
+    color: white;
 
-
-  a{
-    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
   }
-}
   .row {
     align-items: center;
     padding: 0.5rem 0;
     > :nth-child(1) {
-    
-
       display: flex;
       align-items: center;
-    
 
       @media screen and (max-width: 991px) {
-      width: 100%;
-      justify-content: flex-end; 
-
-    }
+        width: 100%;
+        justify-content: flex-end;
+      }
     }
 
     > :nth-child(2) {
-    
-    
-      
     }
 
     > :nth-child(3) {
-        // width: 100%;
+      // width: 100%;
+      display: flex;
+      // justify-content: space-between;
+
+      @media screen and (max-width: 991px) {
+        display: none !important;
+      }
+
+      p {
+        background-color: var(--dark-blue);
         display: flex;
-        // justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0;
+        padding: 0.9rem 1rem;
+        border-radius: 15px;
+        transition: all 0.5s ease;
 
-        @media screen and (max-width: 991px) {
-      display: none !important;
-    }
-
-        p {
-          background-color: var(--dark-blue);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 20px;
-          margin: 0;
-          padding: 0.9rem 1rem;
-          border-radius: 15px;
-          transition: all 0.5s ease;
-
-          &:hover {
-            background-color: var(--blue);
-          }
-        }
-
-        .btn {
-          color: white;
-          // line-height: 0;
-          // margin: 0;
-          font-size: 16px;
-          transition: all 0.5s ease;
-          background-color: var(--dark-blue);
-          padding: 0.3rem 1rem;
-          gap: 20px;
-          // margin: 0;
-
-          border-radius: 10px;
-          transition: all 0.5s ease;
-
-          transition: all 0.5s ease;
-
-          &:hover {
-            background-color: var(--blue);
-          }
-        }
-
-        svg {
-          height: 20px;
-          width: 20px;
-          fill: var(--blue);
-          transition: all 0.5s ease;
-
-          &:hover {
-            fill: var(--dark-blue);
-          }
+        &:hover {
+          background-color: var(--blue);
         }
       }
+
+      .btn {
+        color: white;
+        // line-height: 0;
+        // margin: 0;
+        font-size: 16px;
+        transition: all 0.5s ease;
+        background-color: var(--dark-blue);
+        padding: 0.3rem 1rem;
+        gap: 20px;
+        // margin: 0;
+
+        border-radius: 10px;
+        transition: all 0.3s ease;
+
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--blue);
+        }
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+        fill: var(--blue);
+        transition: all 0.3s ease;
+
+        &:hover {
+          fill: var(--dark-blue);
+        }
+      }
+    }
   }
 
-  .menu-btn{
-    display: none; 
+  .menu-btn {
+    display: none;
 
     @media screen and (max-width: 991px) {
       display: block !important;
@@ -317,9 +273,9 @@
 
   .nav {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
     width: 100%;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     padding: 0;
     margin: 0;
@@ -335,18 +291,33 @@
           width: 250px;
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 10px;
           padding: 2rem 1.5rem;
           // text-align: center;
           top: 30px;
+          transition: all 0.8s ease;
 
           background-color: #ffffff;
+          border-radius: 20px;
           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
           z-index: 1;
 
           a {
             color: black;
-            font-size: 15px;
+            font-size: 14px;
+            margin: 0;
+            font-weight: 600;
+            transition: all 0.5s ease;
+            border-radius: 20px;
+
+            &:hover {
+              // color: #e9e9e9;
+              background-color: var(--blue);
+              padding: 0.6rem;
+              border-radius: 20px;
+              color: white;
+              font-size: 14px;
+            }
           }
         }
       }
@@ -358,29 +329,22 @@
       a {
         position: relative;
         // color: white;
-        padding-bottom: 5px;
+        // padding-bottom: 5px;
+        padding: 0.6rem;
         margin: 0;
         text-transform: uppercase;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
+        transition: all 0.5s ease;
+        border-radius: 20px;
 
         &:hover {
           // color: #e9e9e9;
-          &:after {
-            width: 100%;
-          }
-        }
-
-        &::after {
-          position: absolute;
-          bottom: 0;
-          display: inline-block;
-          content: "";
-          left: 0;
-          width: 0%;
           background-color: var(--blue);
-          height: 2px;
-          transition: var(--transition);
+          padding: 0.6rem;
+          border-radius: 20px;
+          color: white;
+          font-size: 14px;
         }
       }
 
@@ -405,25 +369,23 @@
     display: none;
   }
 
-  @media screen and (max-width: 1080px){
+  @media screen and (max-width: 1080px) {
     .logo {
-    
-    width: 160px;
-     vertical-align: middle;
-  }
+      width: 160px;
+      vertical-align: middle;
+    }
 
-  .row{
-    align-items: flex-start ;
-  }
+    .row {
+      align-items: flex-start;
+    }
 
-  .nav{
-    justify-content: center;
-   
+    .nav {
+      justify-content: center;
 
-  a{
-    font-size: 14px !important;
-  }
-  }
+      a {
+        font-size: 14px !important;
+      }
+    }
   }
 
   @media screen and (max-width: 991px) {
@@ -439,11 +401,13 @@
     .mobile-menu {
       display: block;
       position: fixed;
-      background-color: rgba(0, 0, 0, 0.075);
+      // background-color: rgba(0, 0, 0, 0.075);
+      background-color: red;
       width: 100%;
       height: 100%;
       left: -5000px;
-      top: 0;
+      // top: var(--header-height);
+
       z-index: 111;
       transition: var(--transition);
 
@@ -451,7 +415,7 @@
 
       .wrapper {
         position: relative;
-        width: 80%;
+        width: 100%;
         padding: 4rem 0;
         height: 100%;
         background-color: var(--brown);
@@ -507,13 +471,7 @@
           }
         }
 
-        .subs {
-          display: none;
-
-          li {
-            padding-bottom: 20px;
-          }
-        }
+       
       }
     }
   }
@@ -539,5 +497,9 @@
   .view {
     display: block !important;
     position: relative;
+  }
+
+  .active {
+    background-color: white;
   }
 </style>

@@ -1,0 +1,284 @@
+---
+import Button from "./Button.astro";
+import Section from "./Section.astro";
+import SectionTitle from "./SectionTitle.astro";
+---
+
+<Section>
+  <div class="container">
+
+    <SectionTitle 
+    title="Events"
+    classes="text-center"
+    subtitle="Upcoming Education Events to feed your brain."
+  />
+
+
+
+    <div class=" events-slider" onclick="handleClick(event)">
+      <div class="latest-slide">
+        <div>
+          <img src="/images/events/sankranti/sankranti (1).jpg" alt="" class="bg" />
+          <img
+            src="/images/plus.png"
+            alt=""
+            class="plus"
+            style="max-width: 40px; "
+          />
+
+          <h5>sankranti Celebration</h5>
+          <p class="animate__animated"> <br>
+            <a href="/events" class="btn">View more</a>
+          </p>
+        </div>
+      </div>
+      <div class="latest-slide">
+        <div>
+          <img src="/images/events/Christmas/christmas (1).jpg" alt="" class="bg" />
+          <img
+            src="/images/plus.png"
+            alt=""
+            class="plus"
+            style="max-width: 40px; "
+          />
+
+          <h5>Christmas Celebration</h5>
+          <p class="animate__animated"> <br>
+            <a href="/events" class="btn">View more</a>
+          </p>
+        </div>
+      </div>
+      <div class="latest-slide">
+        <div>
+          <img src="/images/events/wood/wood (1).jpg" alt="" class="bg" />
+          <img
+            src="/images/plus.png"
+            alt=""
+            class="plus"
+            style="max-width: 40px; "
+          />
+
+          <h5>interior manufacturing</h5>
+          <p class="animate__animated"> <br>
+            <a href="/events" class="btn">View more</a>
+          </p>
+        </div>
+      </div>
+    
+    </div>
+
+    <div class="event-controls">
+        <div class="card-button prev">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="46"
+            viewBox="0 0 46 46"
+            fill="none"
+          >
+            <path
+              id="round"
+              d="M23.0001 42.1668C12.4146 42.1668 3.83342 33.5856 3.83342 23.0002C3.83342 12.4147 12.4146 3.8335 23.0001 3.8335C33.5855 3.8335 42.1667 12.4147 42.1667 23.0002C42.1667 33.5856 33.5855 42.1668 23.0001 42.1668Z"
+              stroke="#112121"
+              stroke-width="3.4375"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              id="arrow"
+              d="M25.415 29.7656L18.6684 22.9997L25.415 16.2339"
+              stroke="#112121"
+              stroke-width="3.4375"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="card-button next">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="46"
+            height="46"
+            viewBox="0 0 46 46"
+            fill="none"
+          >
+            <path
+              id="round"
+              d="M22.9999 42.1668C33.5854 42.1668 42.1666 33.5856 42.1666 23.0002C42.1666 12.4147 33.5854 3.8335 22.9999 3.8335C12.4145 3.8335 3.83325 12.4147 3.83325 23.0002C3.83325 33.5856 12.4145 42.1668 22.9999 42.1668Z"
+              stroke="#112121"
+              stroke-width="3.4375"
+              stroke-miterlimit="10"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              id="arrow"
+              d="M20.585 29.7656L27.3316 22.9997L20.585 16.2339"
+              stroke="#112121"
+              stroke-width="3.4375"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+  
+
+      <div class="pt-4">
+        <Button title="View more" variant="normal" classes="text-center" link="/events"/>
+      </div>
+
+  </div>
+</Secti>
+<style lang="scss">
+  .events-slider {
+   
+
+    .latest-slide {
+      height: 700px;
+
+      
+      // background-color: red ;
+
+      * {
+        transition: all 0.5s ease;
+      }
+
+      > div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        gap: 1rem;
+        cursor: pointer;
+        transition: all 0.5s ease;
+
+        * {
+          transition: all 0.5s ease;
+        }
+
+        p {
+          color: white;
+          transition: all 0.5s ease !important;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          a{
+            background: var(--dark-blue);
+            color: white;
+          }
+        }
+
+        h5{
+            font-size: 24px;
+            font-weight: 600;
+            color:var(--dark-blue);
+            background-color: white;
+            padding: 0.5rem;
+            margin: 0;
+            border-radius: 10px;
+        }
+      }
+      .bg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+
+  .event-controls {
+    display: none;
+    @media screen and (max-width: 1080px) {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      cursor: pointer;
+      padding: 2rem 0;
+
+      svg {
+        #round,
+        #arrow {
+          stroke: var(--blue);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+</style>
+
+<script is:inline>
+  var allPTags = document.querySelectorAll(".latest-slide p");
+  allPTags.forEach(function (p) {
+    p.style.display = "none";
+  });
+
+  var allBgs = document.querySelectorAll(".bg");
+
+  allBgs.forEach(function (b) {
+    b.style.filter = "brightness(60%)";
+  });
+
+  var allPlus = document.querySelectorAll(".plus");
+
+  allPlus.forEach(function (c) {
+    c.style.display = "block";
+  });
+
+  function handleClick(event) {
+    // Get the clicked element
+    var clickedElement = event.target;
+
+    // Check if the clicked element is a .latest-slide or its child
+    while (
+      clickedElement &&
+      !clickedElement.classList.contains("latest-slide")
+    ) {
+      clickedElement = clickedElement.parentElement;
+    }
+
+    // If a .latest-slide is found, perform the desired actions
+    if (clickedElement) {
+      // Hide all p tags within the .latest-grid
+      var allPTags = document.querySelectorAll(".latest-slide p");
+      allPTags.forEach(function (p) {
+        p.style.display = "none";
+      });
+
+      var allBgs = document.querySelectorAll(".bg");
+
+      allBgs.forEach(function (b) {
+        b.style.filter = "brightness(60%)";
+      });
+
+      var allPlus = document.querySelectorAll(".plus");
+
+      allPlus.forEach(function (c) {
+        c.style.display = "block";
+      });
+
+      var plus = clickedElement.querySelector(".plus");
+      plus.style.display = "none";
+
+      // Show the p tag inside the clicked .latest-slide
+      var pTag = clickedElement.querySelector("p");
+      if (pTag) {
+        pTag.style.display = "block";
+        pTag.classList.add("animate__fadeInUp");
+      }
+
+      var bgs = clickedElement.querySelector(".bg");
+      if (bgs) {
+        bgs.style.filter = "brightness(100%)";
+      }
+    }
+  }
+</script>

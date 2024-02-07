@@ -9,7 +9,7 @@ import SectionTitle from "./SectionTitle.astro";
       title="Our Network of Schools in Bengaluru"
       classes="text-center pb-4"
     />
-    <p class="para text-center pb-5 ">
+    <p class="para text-center pb-5">
       Siddhanta Intellectual School is part of a broader educational network
       that includes other esteemed institutions in Bengaluru. These schools
       share our commitment to quality education and holistic development. They
@@ -18,60 +18,79 @@ import SectionTitle from "./SectionTitle.astro";
 
     <div class="network-grid">
       <div class="network-slide">
-        <p><img src="/images/nps.png" alt="" /></p>
-        <p><img src="/images/gurukul.png" alt="" /></p>
-        <p><img src="/images/jumbo.png" alt="" /></p>
-      
-       
+        <div>
+          <img src="/images/nps.png" alt="" />
+          <p>
+            National Public School (NPS) is a name synonymous with excellence in
+            education. The NPS branch at Vibhutipura upholds the highest
+            educational standards, and its commitment to holistic development
+            aligns with our ethos.
+          </p>
+        </div>
+        <div>
+          <img src="/images/gurukul.png" alt="" />
+          <p>
+            Suvarnshree Gurukul is dedicated to providing a nurturing and
+            supportive environment for young learners. With a focus on academic
+            excellence and character development, this school aligns perfectly
+            with our values.
+          </p>
+        </div>
+        <div>
+          <img src="/images/jumbo.png" alt="" />
+          <p>
+            Podar Jumbo Kids is renowned for its early childhood education
+            programs. They emphasize a play-based approach to learning, ensuring
+            that young children develop a strong foundation for future academic
+            success.
+          </p>
+        </div>
       </div>
-      
     </div>
   </div>
 </Section>
 
 <style lang="scss">
-  .para{
+  .para {
     margin: 0 auto;
   }
   .network-grid {
-    
     width: 100%;
-    
 
     .network-slide {
-     
-      
       width: 100%;
-      
+
       display: flex;
       justify-content: center;
       gap: 3rem;
       // flex-direction: column;
-      @media screen and (max-width:500px) {
-  flex-direction: column ;
-  gap: 2rem;
- }
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        gap: 2rem;
+      }
 
+      div{
+        text-align: center;
+        border: solid 1px var(--blue);
+        border-radius: 15px;
+        padding: 1rem;
 
-      
-
-      
-     
-
-      
-
-      img{
+        p{
+          font-size: 15px;
+        }
+      }
+      img {
         // // width: 70%;
-        
+
         height: 120px;
         width: 200px;
         object-fit: contain;
         margin: 0 auto !important;
 
- @media screen and (max-width:500px) {
-  width: 200px;
-  height: 100px;
- }
+        @media screen and (max-width: 500px) {
+          width: 200px;
+          height: 100px;
+        }
       }
     }
   }

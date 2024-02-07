@@ -1,0 +1,228 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section>
+  <div class="container">
+    <div class="mission-grid">
+        <div class="slide">
+         <div class="wrapper">
+            <img src="/images/Our-vision.gif" alt="" id="" class="gif" />
+            <img src="/images/visiona.png" alt="" id="" class="img" />
+            <p>
+                In a world often divided by hatred, intolerance, and ignorance,
+                Siddhanta aims to be a beacon of hope and a catalyst for change. Our
+                vision is to create a society of civilized and cultured human beings
+                who can lead the world in the right direction. We aspire to produce
+                graduates who not only excel in their chosen fields but also make a
+                positive impact on their communities and the world at large.
+            </p>
+         </div>
+        </div>
+        <div class="slide">
+          <div class="wrapper">
+            <img src="/images/Our-approach.gif" alt="" id="" class="gif2" />
+          <img src="/images/approachs.png" alt="" id="" class="img2" />
+          <p>
+            At Siddhanta Intellectual School, we prioritize values and character
+            development alongside academic learning. Our approach involves
+            creating a nurturing and inclusive environment where students are
+            encouraged to explore their potential, discover their passions, and
+            develop a strong moral compass. We firmly believe that a
+            well-rounded education encompasses not only subject matter knowledge
+            but also the ability to navigate the complexities of life with
+            wisdom and integrity.
+          </p>
+          </div>
+        </div>
+        <div class="slide">
+        <div class="wrapper">
+            <img src="/images/Our-Philosophy.gif" alt="" id="n" class="gif3" />
+
+            <img src="/images/phils.png" alt="" id="" class="img3" />
+            <p>
+                In a world inundated with information and driven by competition, it
+                is easy to lose sight of what truly matters. At Siddhanta, we
+                understand that the foundation of a better society starts with
+                instilling values, ethics, and a sense of culture in our students.
+                Our philosophy is grounded in the belief that education should not
+                only equip students with the skills they need to excel academically
+                but also empower them to be empathetic, ethical, and socially
+                responsible individuals.
+            </p>
+        </div>
+        </div>  
+    </div>
+</div>
+</Section>
+
+<style lang="scss">
+  .mission-grid {
+  
+
+
+    >:nth-child(1){
+        background-color: red !important;
+        
+            .wrapper{
+            border: solid 1px maroon !important ;
+        }
+        
+        
+    }
+
+
+
+    .slide {
+      
+     
+   
+
+      &:hover {
+      
+
+        .gif {
+           
+            display: block !important;
+            animation: vision 0.8s forwards ;
+            
+        }
+       
+        .gif2 {
+            display: block !important;
+            animation: mission 0.8s forwards ;
+            
+        }
+       
+        .gif3 {
+            display: block !important;
+            animation: philosophy 0.8s forwards;
+            
+        }
+       
+
+        .img{
+            opacity: 0 !important;
+        }
+        .img2{
+           opacity: 0 !important;
+        }
+        .img3{
+           opacity: 0 !important;
+        }
+      }
+
+      .wrapper{
+        position: relative;
+        width: 95%;
+        height: 430px;
+        border: solid 1px maroon !important ;
+        border-radius: 20px;
+        overflow: hidden;
+        p{
+            padding: 1rem;
+        }
+      
+      }
+      
+
+
+
+      
+
+      .gif {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0; 
+        
+        display: none;
+        
+      
+              
+        
+      }
+
+      .gif2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0; 
+        display: none;
+              
+        
+      }
+
+      .gif3 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+        display: none; 
+              
+        
+      }
+
+
+      
+      .img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2 ;
+        right: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        
+      }
+      .img2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2 !important;
+        right: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        
+      }
+      .img3 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2 !important;
+        right: 0;
+        top: 0;
+        display: block;
+        transition: all 0.5s ease;
+        
+      }
+    }
+  }
+
+  @keyframes vision {
+    to {
+      visibility: hidden;
+    }
+  }
+  @keyframes mission {
+    to {
+      visibility: hidden;
+    }
+  }
+  @keyframes philosophy {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  
+
+</style>

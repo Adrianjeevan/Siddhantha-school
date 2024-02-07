@@ -33,6 +33,20 @@ if (document.querySelector(".first-fold-wrapper")) {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if (document.querySelector(".events-slider")) {
   var slider = tns({
     container: ".events-slider",
@@ -60,7 +74,42 @@ if (document.querySelector(".events-slider")) {
         items: 1,
       },
       700: {
-        gutter: 30,
+        gutter: 0,
+        items: 3,
+      },
+    },
+  });
+}
+
+
+if (document.querySelector(".mission-grid")) {
+  var slider = tns({
+    container: ".mission-grid",
+    items: 3,
+    slideBy: 1,
+    autoplay: false,
+    edgePadding: 0,
+    gutter: 20,
+    mouseDrag: true,
+
+    
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    nav: false,
+    animateDelay: 700,
+    responsive: {
+      0: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      640: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      700: {
+        gutter: 20 ,
         items: 3,
       },
     },

@@ -7,14 +7,9 @@ import Eventcard from "./Eventcard.astro";
 
 <Section classes="events-section" style="position:relative; ">
   <div class="container">
-    <SectionTitle
-      title="Events"
-      classes="text-center"
-      subtitle="Upcoming Education Events to feed your brain."
-    />
-
+   
     <div class="events-card-wrapper">
-      <div class="events-slider">
+      <div class="">
         <div class="slide">
           <div class="wrapper">
             <Eventcard
@@ -22,7 +17,7 @@ import Eventcard from "./Eventcard.astro";
               month="December"
               name="events"
               time="10:00 AM"
-              image="/images/homebanner/002.jpg"
+              image="/images/sankranti/sankranti (1).jpg"
               link="/events/events1"
             />
           </div>
@@ -54,62 +49,8 @@ import Eventcard from "./Eventcard.astro";
       </div>
     </div>
 
-    <div class="event-controls">
-      <div class="card-button prev">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="46"
-          height="46"
-          viewBox="0 0 46 46"
-          fill="none"
-        >
-          <path
-            id="round"
-            d="M23.0001 42.1668C12.4146 42.1668 3.83342 33.5856 3.83342 23.0002C3.83342 12.4147 12.4146 3.8335 23.0001 3.8335C33.5855 3.8335 42.1667 12.4147 42.1667 23.0002C42.1667 33.5856 33.5855 42.1668 23.0001 42.1668Z"
-            stroke="#112121"
-            stroke-width="3.4375"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            id="arrow"
-            d="M25.415 29.7656L18.6684 22.9997L25.415 16.2339"
-            stroke="#112121"
-            stroke-width="3.4375"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </div>
-      <div class="card-button next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="46"
-          height="46"
-          viewBox="0 0 46 46"
-          fill="none"
-        >
-          <path
-            id="round"
-            d="M22.9999 42.1668C33.5854 42.1668 42.1666 33.5856 42.1666 23.0002C42.1666 12.4147 33.5854 3.8335 22.9999 3.8335C12.4145 3.8335 3.83325 12.4147 3.83325 23.0002C3.83325 33.5856 12.4145 42.1668 22.9999 42.1668Z"
-            stroke="#112121"
-            stroke-width="3.4375"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-          <path
-            id="arrow"
-            d="M20.585 29.7656L27.3316 22.9997L20.585 16.2339"
-            stroke="#112121"
-            stroke-width="3.4375"
-            stroke-linecap="round"
-            stroke-linejoin="round"></path>
-        </svg>
-      </div>
-    </div>
-
-    <div class="pt-4">
-      <Button title="View more" variant="normal" classes="text-center" link="/events"/>
-    </div>
+   
+   
   </div>
 </Section>
 
@@ -137,22 +78,5 @@ import Eventcard from "./Eventcard.astro";
   
   }
 
-  .event-controls {
-    display: none;
-    @media screen and (max-width: 1080px) {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      cursor: pointer;
-      padding: 2rem 0;
-
-      svg {
-        #round,
-        #arrow {
-          stroke: var(--blue);
-          cursor: pointer;
-        }
-      }
-    }
-  }
+ 
 </style>

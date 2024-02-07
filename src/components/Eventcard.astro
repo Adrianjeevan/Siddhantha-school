@@ -53,6 +53,8 @@ const { date, month, name, time, location, image, link } = Astro.props;
   .event-grid {
    
     width: 100%;
+    height: 100%;
+
     display:flex;
     flex-direction:column;
     border-radius: 10px;
@@ -119,6 +121,7 @@ const { date, month, name, time, location, image, link } = Astro.props;
 
     .image {
       width: 100%;
+      height: 200px;
       transition: all 0.5s ease;
       
       border-radius: 10px;
@@ -126,6 +129,7 @@ const { date, month, name, time, location, image, link } = Astro.props;
       img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
         border-radius: 10px;
         transition: all 0.5s ease;
       }

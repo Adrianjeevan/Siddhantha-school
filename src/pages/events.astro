@@ -28,37 +28,30 @@ import Eventcard from "../components/Eventcard.astro";
             <div id="div1" class="tab-content">
                 <div class="events-display" >
                   <Eventcard
-                  date="20"
-                  month="December"
-                  name="events"
+                  date=""
+                  month="January"
+                  name="Sankranti Celebration"
                   time="10:00 AM"
-                  image="/images/homebanner/002.jpg"
-                  link="/events/events1"
+                  image="/images/events/sankranti/sankranti (1).jpg"
+                  link="/events/sankranti"
                 />
                 <Eventcard
-                date="20"
-                month="December"
-                name="events"
+                date=""
+                month="January"
+                name="interior manufacturing unit"
                 time="10:00 AM"
-                image="/images/homebanner/002.jpg"
-                link="/events/events1"
+                image="/images/events/wood/wood (1).jpg"
+                link="/events/wood"
               />
               <Eventcard
-              date="20"
+              date=""
               month="December"
-              name="events"
+              name="christmas Celebration"
               time="10:00 AM"
-              image="/images/homebanner/002.jpg"
-              link="/events/events1"
+              image="/images/events/Christmas/christmas (1).jpg"
+              link="/events/christmas"
             />
-            <Eventcard
-            date="20"
-            month="December"
-            name="events"
-            time="10:00 AM"
-            image="/images/homebanner/002.jpg"
-            link="/events/events1"
-          />
+            
       
                  
                  
@@ -129,6 +122,13 @@ import Eventcard from "../components/Eventcard.astro";
         place-content: center;
         place-items: center;
         gap: 2rem;
+
+        @media screen and (max-width:991px) {
+          grid-template-columns: repeat( 2 , 1fr );
+        }
+        @media screen and (max-width:500px) {
+          grid-template-columns: repeat( 1 , 1fr );
+        }
     }
  .active {
     

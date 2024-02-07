@@ -36,7 +36,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
                 <img
                   src="/images/quote (1).png"
                   alt=""
-                  style="max-width: 50px;"
+               
                 />
               </div>
             </div>
@@ -58,7 +58,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
                 <img
                   src="/images/quote (1).png"
                   alt=""
-                  style="max-width: 50px;"
+                
                 />
               </div>
             </div>
@@ -80,7 +80,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
                 <img
                   src="/images/quote (1).png"
                   alt=""
-                  style="max-width: 50px;"
+             
                 />
               </div>
             </div>
@@ -102,38 +102,13 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
                 <img
                   src="/images/quote (1).png"
                   alt=""
-                  style="max-width: 50px;"
+                
                 />
               </div>
             </div>
           </div>
         </div>
-        <div class="slide">
-          <div class="wrapper">
-            <!-- <img src="/images/tb1.png" alt=""> -->
-            <div class="overlay">
-              <img src="" alt="" />
-            </div>
-            <div class="content">
-              <div></div>
-              <div class="name">Vinayashree G</div>
-              <p>
-                I am so pleased with how my child has progressed. Thank you for
-                your help, my child is very happy. My child always talks about
-                school and the work he is doing, he is getting on really well.
-                Very good teachers and really helpful, my son has learnt a lot
-                of things.
-              </p>
-              <div>
-                <img
-                  src="/images/quote (1).png"
-                  alt=""
-                  style="max-width: 50px;"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
 
@@ -164,7 +139,7 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
       .wrapper {
         position: relative;
         width: 90%;
-        background-color: aliceblue;
+        // background-color: aliceblue;
         padding: 2rem;
         margin: 0 auto;
         border-radius: 10px;
@@ -172,11 +147,14 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
         height: 450px;
         display: block !important;
         transition: all 0.5s ease;
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+       
+        background-color: rgba(9, 142, 186, 0.201);
+         
+
         
 
         &:hover {
-          background-color: rgba(9, 142, 186, 0.201);
+      
           box-shadow: rgba(137, 215, 243, 0.655) 0px 25px 20px -20px;
 
           .overlay{
@@ -203,10 +181,39 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
 
           }
           }
+
+          .content{
+            img{
+              opacity: 80%;
+              top: 75%;
+            }
+          }
         }
 
         .overlay {
-         display: none;
+          border: solid  var(--dark-blue);
+            display: block;
+            position: absolute;
+          top: -3rem;
+          width: 70px;
+          height: 70px;
+          border-radius: 70px;
+          transition: all 0.5s ease;
+          border: solid 2px var(--blue);
+          backdrop-filter: blur(30px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          
+ 
+          box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+          img{
+            width: 45px;
+            
+
+          }
         }
 
         .content {
@@ -230,6 +237,19 @@ import "@fancyapps/ui/dist/carousel/carousel.css";
             font-size: 16px;
             width: 100%;
             text-align: center;
+          }
+
+          img{
+            position: absolute;
+            // height: 90%;
+            width: 100px;
+            z-index: -1;
+            top: 70%;
+            right: 20px;
+            opacity: 20%;
+            transition: all 0.5s ease ;
+
+
           }
         }
       }
