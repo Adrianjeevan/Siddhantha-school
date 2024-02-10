@@ -87,7 +87,7 @@ gsap.from(".staff", {
     toggleActions: "play none none reverse",
     // markers: true,
   },
-  y: 20,
+  y: 50,
 
   opacity: 0,
 
@@ -95,7 +95,7 @@ gsap.from(".staff", {
   delay: 0.1,
   stagger: 0,
   scale: 0.9,
-  ease: "power4.inOut",
+
 });
 
 gsap.from(".pagebanner .left", {
@@ -133,3 +133,172 @@ gsap.from(".pagebanner .right", {
 
   ease: "power4.inOut",
 });
+
+gsap.from(".exp-left", {
+  scrollTrigger: {
+    trigger: ".exp-left",
+    start: "top 80%",
+
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  x: -100,
+
+  opacity: 0,
+
+  duration: 1,
+});
+
+gsap.from(".top-anime div", {
+  scrollTrigger: {
+    trigger: ".top-anime div",
+    start: "top 80%",
+
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.4,
+
+  duration: 1,
+});
+
+
+gsap.from(".network-slide", {
+  scrollTrigger: {
+    trigger: ".network-slide",
+    start: "top 80%",
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+gsap.from(".abouts", {
+  scrollTrigger: {
+    trigger: ".abouts", 
+    start: "top 80%",
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+gsap.from(".course-content", {
+ 
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 1,
+  
+  delay: 0,  
+});  
+
+gsap.from(".contact-card", {
+
+  
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+
+
+gsap.from(".forms", {
+  scrollTrigger: {
+    trigger: ".forms", 
+    start: "top 80%",
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  
+  duration: 1,
+  
+  delay: 0,
+});
+
+gsap.from(".map", {
+  scrollTrigger: {
+    trigger: ".map", 
+    start: "top 80%",
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+gsap.from(".admission", {
+  scrollTrigger: {
+    trigger: ".admission", 
+    start: "top 80%",
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  stagger: 0.2,
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+
+

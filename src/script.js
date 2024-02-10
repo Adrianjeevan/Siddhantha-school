@@ -9,8 +9,6 @@ import { Carousel } from "@fancyapps/ui";
 
 Fancybox.bind();
 
- 
-
 let headerHeight = document.querySelector("header").offsetHeight;
 
 // set css variable header-height to the height of <header>
@@ -32,20 +30,6 @@ if (document.querySelector(".first-fold-wrapper")) {
       headerHeight + "px";
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if (document.querySelector(".events-slider")) {
   var slider = tns({
@@ -79,8 +63,24 @@ if (document.querySelector(".events-slider")) {
       },
     },
   });
-}
 
+  gsap.utils.toArray(".latest-slide").forEach(function (slide, index) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4 * index, // Stagger based on slide index
+      },
+    });
+  });
+}
 
 if (document.querySelector(".mission-grid")) {
   var slider = tns({
@@ -92,7 +92,6 @@ if (document.querySelector(".mission-grid")) {
     gutter: 20,
     mouseDrag: true,
 
-    
     autoplayButton: false,
     autoplayButtonOutput: false,
     nav: false,
@@ -109,10 +108,27 @@ if (document.querySelector(".mission-grid")) {
         items: 1,
       },
       700: {
-        gutter: 20 ,
+        gutter: 20,
         items: 3,
       },
     },
+  });
+
+  gsap.utils.toArray(".mission-grid .wrapper ").forEach(function (slide, index  ) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4 * index // Stagger based on slide index
+      },
+    });
   });
 }
 
@@ -227,8 +243,6 @@ if (document.querySelector(".safety-slider")) {
     },
   });
 }
-
-
 
 if (document.querySelector(".facility-slider")) {
   var slider = tns({
@@ -432,6 +446,24 @@ if (document.querySelector(".testimonials")) {
       },
     },
   });
+
+
+  gsap.utils.toArray(".testimonials .slide").forEach(function (slide, index) {
+    gsap.from(slide, {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: slide,
+        start: "top 80%",
+        scale: 0.9,
+
+        // For debugging, you can remove this in production
+        toggleActions: "play none none reverse",
+        stagger: 0.4 * index // Stagger based on slide index
+      },
+    });
+  });
 }
 
 if (document.querySelector(".vision-grid")) {
@@ -523,4 +555,3 @@ bigVideos.forEach(function (videos) {
   //     // videos.play();
   //   });
 });
-

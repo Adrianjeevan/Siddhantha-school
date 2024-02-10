@@ -27,13 +27,13 @@ import SectionTitle from "./SectionTitle.astro";
           <div class="one " id="anand">
             <img src="/images/anand-sir.png" alt="" class="">
           </div>
-          <div class="one" id="siddhi">
+          <div class="one two" id="siddhi">
             <img src="/images/siddhi-mam.png" alt="">
           </div>
         </div>
 
         <div>
-          <div class="anand-text animate__animated animate__fadeIn">
+          <div class="anand-text animate__animated animate__fadeInUp">
             <h4>
                 Anand Kumar M S
             </h4>
@@ -42,7 +42,7 @@ import SectionTitle from "./SectionTitle.astro";
                 Anand Kumar M S, a professional, having over 18 years of experience in product management, large-scale strategy building and implementation. He has successfully managed multimillion projects acrossvariousverticals.Apart from hisstellarcareer in product management, he has launched numerous start-ups, his first venture being ‘Success’ a tutorial center at the age of 19. Also a certified financial planner from the Financial Planning Standards Board, India, he is one of the youngest people to receive such a certification. His stint with multinational firms such as Fiserv and FinEye Corporation has helped him gain rich professional experience in customer centric approach to do business and rendering service. Being a holder of a Master’s Degree in Financial Planning and Management from the University of Mysore, Anand aims at bringing up an institution like Siddhanta Intellectual School, to share his knowledge and experience and create a legacyin making tomorrow’s leaders.
             </p>
           </div>
-          <div class="siddhi-text animate__animated animate__fadeIn">
+          <div class="siddhi-text animate__animated animate__fadeInUp ">
             <h4>
                 S Siddhilakshmi
             </h4>
@@ -104,6 +104,7 @@ import SectionTitle from "./SectionTitle.astro";
 
     >:nth-child(2){
         display: flex;
+        overflow: hidden;
             gap: 2rem;
             flex-direction: column;
             gap: 3rem;
@@ -138,7 +139,7 @@ import SectionTitle from "./SectionTitle.astro";
             overflow: hidden;
             cursor: pointer;
             // padding: 0.1rem;
-            border: solid 2px var(--blue);
+            // border: solid 2px var(--blue);
 
             img{
             width: 100%;
@@ -163,6 +164,11 @@ import SectionTitle from "./SectionTitle.astro";
   const text1 = document.querySelector(".anand-text");
   const text2 = document.querySelector(".siddhi-text");
 
+  const borderOne = document.querySelector(".one");
+  const borderTwo = document.querySelector(".two");
+
+  borderOne.style.border = "solid 4px var(--blue)" 
+
   siddhi.style.display = "none";
   text2.style.display = "none";
 
@@ -171,6 +177,9 @@ import SectionTitle from "./SectionTitle.astro";
     text2.style.display = "none";
     text1.style.display = "block";
     anand.style.display = "block";
+    borderOne.style.border = "solid 4px var(--blue)" 
+    borderTwo.style.border = "none"  
+
   });
 
   twos.addEventListener("click", () => {
@@ -178,5 +187,7 @@ import SectionTitle from "./SectionTitle.astro";
     text2.style.display = "block";
     text1.style.display = "none";
     anand.style.display = "none";
+    borderTwo.style.border = "solid 4px var(--blue) " 
+    borderOne.style.border = "none" 
   });
 </script>

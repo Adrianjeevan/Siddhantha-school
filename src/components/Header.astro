@@ -4,7 +4,28 @@
 
 <header id="header" class="animate__animated">
   <div class="head-banner">
-    <a href="">Admission open for 2024 - 2025</a>
+  <div class="container">
+    <div class="wrapper d-flex ">
+      <div class="running  d-flex">
+        <a href="">Admission open for 2024 - 2025</a>
+       
+      </div>
+      <div class="running  d-flex">
+        <a href="">Admission open for 2024 - 2025</a>
+       
+      </div>
+      <div class="running  d-flex">
+        <a href="">Admission open for 2024 - 2025</a>
+       
+      </div>
+      
+     
+     
+    
+     
+     </div>
+  </div>
+
   </div>
   <div class="container">
     <div class="row align-items-center">
@@ -40,7 +61,7 @@
                 <a href="/nursery">Nursery,LKG,UKG</a>
                 <a href="/grade1-5">Grade 1- 5</a>
                 <a href="/grade6-7">Grade 6 - 7</a>
-                <a href="/grade7-9">Grade 8 - 9</a>
+                <a href="/grade8-10">Grade 8 - 10</a>
               </div>
             </li>
             <li><a href="/admission">Admission</a></li>
@@ -96,7 +117,7 @@
 </header>
 
 <div class="mobile-menu" id="menus">
-  <div class="wrapper">
+  <div class="wrapper">  
     <div class="container">
       <ul>
         <li><a href="/">Home</a></li>
@@ -111,7 +132,7 @@
             <li class=""> <a href="/nursery">Nursery,LKG,UKG</a></li>
             <li class="">  <a href="/grade1-5">Grade 1- 5</a></li>
             <li class="">  <a href="/grade6-7">Grade 6 - 7</a></li>
-            <li class=""> <a href="/grade7-9">Grade 8 - 9</a></li>
+            <li class=""> <a href="/grade8-10">Grade 8 - 10</a></li>
            
           </ul>
         </li>
@@ -178,14 +199,45 @@
     // padding: 1rem 0;
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
+
+  @keyframes running-text {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+
   .head-banner {
     background-color: var(--dark-blue);
     padding: 0.4rem 0;
-    text-align: center;
+    .wrapper{
+      text-align: center;
     color: white;
+    position: relative;
+    display: inline-block;
+    
+    justify-content: flex-end ;
+    width: 100%;
+    margin: 0 auto ;
+    
+    gap: 20px;
+    overflow: hidden;
+    white-space: nowrap;
 
     a {
       font-size: 14px;
+    }
+
+    .running{
+      animation: running-text 10s infinite linear; 
+      
+      white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+      gap: 10px; 
+      width: 100% !important;
+      text-align: end;
+
+      
+    }
     }
   }
   .row {
@@ -502,4 +554,8 @@
   .active {
     background-color: white;
   }
+
+
+
+
 </style>
