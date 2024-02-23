@@ -7,76 +7,83 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Admissions">
   <PageBanner title="Admissions" image="/images/brushed/Banner-img-012.png" />
-  <Section>
-
-
+  <Section style="padding:0rem 0 0 0;">
+ 
+    <div class="adm-bg pt-4">
+      <img src="/images/sis (22).jpg" alt="" >
+      <div class="container">
+        <SectionTitle spans="Book a School Tour" classes="text-center " style="padding:3rem 0 0 0;"
+        
+        />
+  
+        <!-- Calendly inline widget begin -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/siddhanthaschool/school-tour?hide_gdpr_banner=1"
+          style="min-width:320px;height:700px;"
+        >
+        </div>
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async></script>
+        <!-- Calendly inline widget end -->
       
-    <div class="container">
-      <SectionTitle title="Book a School Tour" classes="text-center" />
-
-      <!-- Calendly inline widget begin -->
-      <div
-        class="calendly-inline-widget"
-        data-url="https://calendly.com/siddhanthaschool/school-tour?hide_gdpr_banner=1"
-        style="min-width:320px;height:700px;"
-      >
       </div>
-      <script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async></script>
-      <!-- Calendly inline widget end -->
-      <div class="admission pt-5">
+    </div>
 
-
-
+    <div class="admission pt-5">
+  
+  
+  
+      <div class="container">
         <ul>
           <li>
             <strong>Step 1:</strong> Online Inquiry Submission - Parents initiate
             the process by completing the Enquiry Form on our website.
           </li>
-
+  
           <li>
             <strong>Step 2:</strong> Informational Connection - Our school counsellor
             engages with parents over a call, providing details about the school,
             including the fee structure, options for virtual or phone counselling,
             campus visits, etc.
           </li>
-
+  
           <li>
             <strong>Step 3:</strong> Consultation with Parent Counsellor - Schedule
             a meeting with the Parent Counsellor to discuss specific concerns and
             queries.
           </li>
-
+  
           <li>
             <strong>Step 4:</strong> Guided Campus Tour - Experience a comprehensive
             tour of the campus to familiarize parents with our facilities.
           </li>
-
+  
           <li>
             <strong>Step 5:</strong> Principal's Personal Interview - Participate
             in a Personal Interview with the Principal to ensure a personalized understanding
             of the child's needs and aspirations.
           </li>
-
+  
           <li>
             <strong>Step 6:</strong> Application Submission - Parents are then requested
             to complete and submit the Application Form for their child's school
             admission, including all necessary documents.
           </li>
-
+  
           <li>
             <strong>Step 7:</strong> Baseline Assessment (Grade 1 and above) - For
             Grade 1 and above admissions, the child undergoes an online Baseline
             Assessment Test.
           </li>
-
+  
           <li>
             <strong>Step 8:</strong> Admission Confirmation - Confirm admission by
             submitting the Registration amount, solidifying the enrollment process.
           </li>
-
+  
           <li>
             <strong>Step 9:</strong> Enrolment Finalization - Upon payment, the child's
             enrolment number is generated, marking the successful completion of the
@@ -85,13 +92,27 @@ import Layout from "../layouts/Layout.astro";
         </ul>
       </div>
     </div>
+      
+   
   </Section>
 </Layout>
 
 <style lang="scss">
+
+.adm-bg{
+  position: relative;
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    filter: brightness(40%);
+  }
+}
   .admission {
   
-
+   
 
      svg{
 

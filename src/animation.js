@@ -300,5 +300,130 @@ gsap.from(".admission", {
 
 
 
+const lefts = document.querySelectorAll(".zigzag .left-img"); 
+
+
+gsap.from(".l1", {
+  scrollTrigger: {
+    trigger: ".l1", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  x: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+gsap.from(".l2", {
+  scrollTrigger: {
+    trigger: ".l2", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  x: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
+gsap.from(".l3", {
+  scrollTrigger: {
+    trigger: ".l3", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  x: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
+
+
+
+gsap.from(".r1", {
+  scrollTrigger: {
+    trigger: ".r1", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+gsap.from(".r2", {
+  scrollTrigger: {
+    trigger: ".r2", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+gsap.from(".r3", {
+  scrollTrigger: {
+    trigger: ".r3", 
+    start: "top 80%",
+    stagger: 0.2,
+  
+    toggleActions: "play none none reverse",
+
+    // markers: true,
+  },
+  y: 100,
+
+  opacity: 0,
+  
+  scale:0.9,
+  duration: 1,
+  
+  delay: 0,
+});
+
 
 

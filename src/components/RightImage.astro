@@ -2,7 +2,7 @@
 const { title , content , image } = Astro.props
 ---
 
-<div class="left-image">
+<div class="right-image">
     <div class="row gy-4">
         <div class="col-lg-5">
             
@@ -16,33 +16,5 @@ const { title , content , image } = Astro.props
 </div>
 
 <style lang="scss">
-    .left-image{
-        padding-bottom: 4rem;
-        .row{
-            justify-content: space-around;
-            // gap: 3rem;
-            align-items: center;
-
-            @media screen and (max-width:991px) {
-             flex-direction: column-reverse ;
-            }
-            >:nth-child(2){
-                overflow: hidden;
-                border: solid 10px var(--blue);
-                height: 500px;
-                padding: 0;
-            }
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            h5{
-                font-size: clamp(24px, 4vw, 30px);
-                color: var(--dark-blue);
-                margin-bottom: 1rem;
-            }
-        }
-    }
+   
 </style>

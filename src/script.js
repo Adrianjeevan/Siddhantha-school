@@ -32,7 +32,7 @@ if (document.querySelector(".first-fold-wrapper")) {
 }
 
 if (document.querySelector(".events-slider")) {
-  var slider = tns({
+  var eventslider = tns({
     container: ".events-slider",
     items: 3,
     slideBy: 1,
@@ -69,6 +69,7 @@ if (document.querySelector(".events-slider")) {
       y: 100,
       opacity: 0,
       duration: 1,
+      stagger: 0.4,
       scrollTrigger: {
         trigger: slide,
         start: "top 80%",
@@ -76,11 +77,59 @@ if (document.querySelector(".events-slider")) {
 
         // For debugging, you can remove this in production
         toggleActions: "play none none reverse",
-        stagger: 0.4 * index, // Stagger based on slide index
+        stagger: 0.4, // Stagger based on slide index
       },
     });
   });
+
+
 }
+
+
+if (document.querySelector(".messages-slider")) {
+  var eventslider = tns({
+    container: ".messages-slider",
+    items: 3,
+    slideBy: 1,
+    autoplay: false,
+    edgePadding: 0,
+    gutter: 20,
+    mouseDrag: true,
+    controlsContainer:".founder-controls", 
+   
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    nav: false,
+    animateDelay: 700,
+    responsive: {
+      0: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      640: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      700: {
+        gutter: 30,
+        items: 3,
+      },
+    },
+  });
+
+  
+
+
+}
+
+
+
+
+
+
+
 
 if (document.querySelector(".mission-grid")) {
   var slider = tns({
@@ -331,6 +380,8 @@ if (document.querySelector(".gallery-slider")) {
       ease: "power4.inOut",
     });
   });
+
+
 }
 
 if (document.querySelector(".journey-one")) {

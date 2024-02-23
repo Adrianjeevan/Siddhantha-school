@@ -45,15 +45,45 @@ import Art from "../components/svgs/Art.astro";
             Our Day Care in Bangalore helps your child to learn the following skills:
              
           </p>
-          <ul>
-            <li><strong>Social Skills:</strong> Our Day Care centre helps your children develop early social skills that contribute to their social and emotional growth. Learning to interact with others is crucial, and the earlier a child begins to socialize, the easier it becomes.</li>
+
+          <div class="new-tiles">
+            <div class="tile-item"> 
+              <div class="name">Social Skills</div>
+              <p>
+                Our Day Care centre helps your children develop early social skills that contribute to their social and emotional growth. Learning to interact with others is crucial, and the earlier a child begins to socialize, the easier it becomes.
+              </p>
+            </div>
+             
           
-            <li><strong>Self-Assurance:</strong> Young children may experience separation anxiety. Siddhanta Intellectual School helps overcome this fear by providing daily contact with other children, fostering a sense of security and self-assurance.</li>
+
+            <div class="tile-item">
+              <div class="name">Self assurance</div>
+              <p>
+                Young children may experience separation anxiety. Siddhanta Intellectual School helps overcome this fear by providing daily contact with other children, fostering a sense of security and self-assurance.
+              </p>
+            </div>
+            
+            <div class="tile-item">
+              <div class="name">Cognitive Skills</div>
+              <p>
+                Children benefit cognitively from educational activities and games offered by our Day Care in Bangalore. They learn language skills, colors, numbers, and develop thinking skills through play, fostering curiosity and exploration.
+              </p>
+            </div>
+
+
+           <div class="tile-item">
+            <div class="name">Disciplines</div>
+            <p>
+              The structured environment of our Day Care, with fixed schedules for snacks, naps, and activities, provides children with a sense of stability and kindness every day. This routine instills discipline in their daily activities and a sense of togetherness for emotional security
+            </p>
+           </div>
+             
           
-            <li><strong>Cognitive Skills:</strong> Children benefit cognitively from educational activities and games offered by our Day Care in Bangalore. They learn language skills, colors, numbers, and develop thinking skills through play, fostering curiosity and exploration.</li>
+          </div>
+
+
+
           
-            <li><strong>Discipline:</strong> The structured environment of our Day Care, with fixed schedules for snacks, naps, and activities, provides children with a sense of stability and kindness every day. This routine instills discipline in their daily activities and a sense of togetherness for emotional security.</li>
-          </ul>
           
         </div>
       </div>
@@ -62,6 +92,46 @@ import Art from "../components/svgs/Art.astro";
 
   <OtherClass />
 </Layout>
+
+
+<style is:global lang="scss" >
+  .new-tiles{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr );
+    gap: 3rem;
+
+    @media screen and (max-width:991px) {
+      grid-template-columns: repeat(2 , 1fr );
+    }
+   
+    @media screen and (max-width:500px) {
+      grid-template-columns: repeat(1 , 1fr );
+    }
+   
+ 
+
+    .tile-item{
+      background-color: rgb(215, 234, 248);
+      padding:2rem 2rem ;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+
+      &:hover{
+        background-color: var(--blue);
+        .name{
+          color:white !important;
+        }
+      }
+      .name{
+        font-size: 22px;
+        padding-bottom: 1rem;
+        color: var(--dark-blue);
+        
+      }
+    }
+
+  }
+</style>
 
 <style lang="scss">
   .activities {
@@ -82,6 +152,8 @@ import Art from "../components/svgs/Art.astro";
         height: auto !important;
       }
     }
+
+
 
     > div {
       background-color: rgb(234, 235, 235);

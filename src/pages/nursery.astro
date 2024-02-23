@@ -50,15 +50,15 @@ import Layout from "../layouts/Layout.astro";
               Bangalore
             </div>
           
-            <ul>
-              <li>Language development</li>
-              <li>Develop individual abilities</li>
-              <li>Development of fine motors</li>
-              <li>Personal consciousness</li>
-              <li>Gross motor development</li>
-              <li>Social and emotional development</li>
-              <li>Cognitive development</li>
-            </ul>
+            <div class="new-tiles" >
+              <div class="tile-item">Language development</div>
+              <div class="tile-item">Develop individual abilities</div>
+              <div class="tile-item">Development of fine motors</div>
+              <div class="tile-item">Personal consciousness</div>
+              <div class="tile-item">Gross motor development</div>
+              <div class="tile-item">Social and emotional development</div>
+              <div class="tile-item">Cognitive development</div>
+            </div>
           </div>
         </div>
 
@@ -116,6 +116,37 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style lang="scss" is:global >
+
+
+.new-tiles{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr );
+    gap: 3rem;
+
+    @media screen and (max-width:991px) {
+      grid-template-columns: repeat(2 , 1fr );
+    }
+   
+    @media screen and (max-width:500px) {
+      grid-template-columns: repeat(1 , 1fr );
+    }
+   
+
+    .tile-item{
+      background-color: rgb(215, 234, 248);
+      padding:1rem 1rem ;
+      border-radius: 20px;
+      transition: all 0.5s ease;
+
+      &:hover{
+        background-color: var(--blue);
+        color:white !important;
+        
+      }
+      
+    }
+
+  }
   .course-content {
     // color: white;
     display: flex;
