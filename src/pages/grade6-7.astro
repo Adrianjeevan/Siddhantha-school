@@ -29,12 +29,12 @@ import Layout from "../layouts/Layout.astro";
             Benefits of Montessori education
           </div>
 
-          <ul>
-            <li><span>Each child is valued as a unique individual-</span>Montessori education recognizes that children learn in different ways and are compatible with all learning styles. Students are free to study at their own pace, and each starts when they are ready, based on the teacher and the individual curriculum.  </li>
-            <li><span>Montessori education fosters order, focus and independence from an early age-</span>The intended design of classrooms, learning materials, and everyday life support a new "self-regulation" of students from infants to teens (the ability to educate themselves and think about what they are learning).</li>
-            <li><span>Montessori students enjoy freedom within boundaries-</span>
+          <ul class="new-tiles" >
+            <li class="tile-item"><span>Each child is valued as a unique individual-</span>Montessori education recognizes that children learn in different ways and are compatible with all learning styles. Students are free to study at their own pace, and each starts when they are ready, based on the teacher and the individual curriculum.  </li>
+            <li class="tile-item"><span>Montessori education fosters order, focus and independence from an early age-</span>The intended design of classrooms, learning materials, and everyday life support a new "self-regulation" of students from infants to teens (the ability to educate themselves and think about what they are learning).</li>
+            <li class="tile-item"><span>Montessori students enjoy freedom within boundaries-</span>
               By working within the standards set by the teacher and the classroom, students actively participate in determining the focus of learning.</li>
-              <li>
+              <li class="tile-item">
                 <span>Montessori supports social and emotional skills- </span>Recent studies have supported the effectiveness of the Montessori method for 100 years, and children attending Montessori classes show stronger social and emotional skills in more areas than children in traditional settings.
               </li>
           </ul>
@@ -49,14 +49,14 @@ import Layout from "../layouts/Layout.astro";
           <div class="sub-title">
             Why choose our Montessori education program?
           </div>
-          <ul>
-            <li>We are the best Montessori School in Bangalore designed to enrich your child with genuine education that gives good guidelines and humane values.</li>
-            <li>Our Montessori education program has come together to unleash great potential for children by challenging new possibilities and widening the distance between quality and real education.</li>
-            <li>The school builds strong and positive bonds with students so that they can become self-reliant, self-confident, and gain academic knowledge.</li>
-            <li>Our Montessori School Bangalore leads a progressive journey and is reinforced by the ongoing support and compassion that parents, teachers, and students receive.</li>
-            <li>Our students have different interests, personalities, and learning styles. Our approach supports the development of individual capabilities, and our results are consistent.</li>
-            <li>Our students are academically well-prepared, show creativity, self-confidence, ability, and love to learn what is most important.</li>
-            <li>The school focuses on individual children and provides an environment that truly stimulates their love for lifelong learning.</li>
+          <ul class="new-tiles">
+            <li class="tile-item">We are the best Montessori School in Bangalore designed to enrich your child with genuine education that gives good guidelines and humane values.</li>
+            <li class="tile-item">Our Montessori education program has come together to unleash great potential for children by challenging new possibilities and widening the distance between quality and real education.</li>
+            <li class="tile-item">The school builds strong and positive bonds with students so that they can become self-reliant, self-confident, and gain academic knowledge.</li>
+            <li class="tile-item">Our Montessori School Bangalore leads a progressive journey and is reinforced by the ongoing support and compassion that parents, teachers, and students receive.</li>
+            <li class="tile-item">Our students have different interests, personalities, and learning styles. Our approach supports the development of individual capabilities, and our results are consistent.</li>
+            <li class="tile-item">Our students are academically well-prepared, show creativity, self-confidence, ability, and love to learn what is most important.</li>
+            <li class="tile-item">The school focuses on individual children and provides an environment that truly stimulates their love for lifelong learning.</li>
         </ul>
         </div>
       </div>
@@ -68,6 +68,49 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style lang="scss">
+
+.new-tiles{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr );
+    gap: 3rem;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (max-width:991px) {
+      grid-template-columns: repeat(2 , 1fr );
+    }
+   
+    @media screen and (max-width:500px) {
+      grid-template-columns: repeat(1 , 1fr );
+      gap: 1rem;
+    }
+   
+
+    .tile-item{
+      background-color: rgb(215, 234, 248);
+      padding:2rem 2rem ;
+      border-radius: 20px;
+      display: flex;
+      gap: 1rem;
+      // justify-content: center;
+
+      flex-direction: column;
+      // align-items: center;
+      transition: all 0.5s ease;
+
+      span{
+        color: var(--dark-blue);
+      }
+
+      &:hover{
+        background-color: var(--blue);
+        color:white !important;
+        
+      }
+      
+    }
+
+  }
   .lists {
     > :nth-child(1) {
       background-color: aliceblue;

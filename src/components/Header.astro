@@ -5,19 +5,11 @@
 <header id="header" class="animate__animated">
   <div class="head-banner">
   <div class="container">
-    <div class="wrapper d-flex ">
-      <div class="running  d-flex">
-        <a href="">Admission open for 2024 - 2025</a>
-       
-      </div>
-      <div class="running  d-flex">
-        <a href="">Admission open for 2024 - 2025</a>
-       
-      </div>
-      <div class="running  d-flex">
-        <a href="">Admission open for 2024 - 2025</a>
-       
-      </div>
+    <div class="wrapper">
+     <marquee>
+      <a href="">Admission open for 2024 - 2025</a> 
+     </marquee>
+     
       
      
      
@@ -185,6 +177,9 @@
   //   }
 
   // });
+
+   
+
 </script>
 
 <style lang="scss">
@@ -200,45 +195,24 @@
     // box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   }
 
-  @keyframes running-text {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-  }
-
+ 
 
   .head-banner {
     background-color: var(--dark-blue);
     padding: 0.4rem 0;
     .wrapper{
-      text-align: center;
-    color: white;
-    position: relative;
-    display: inline-block;
-    
-    justify-content: flex-end ;
-    width: 100%;
-    margin: 0 auto ;
-    
-    gap: 20px;
-    overflow: hidden;
-    white-space: nowrap;
+     
+     display:flex;
+     justify-content: center;
+     align-items: center;
 
     a {
       font-size: 14px;
       margin: 0;
+      color: white; 
     }
 
-    .running{
-      animation: running-text 10s infinite linear; 
-      
-      white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowing text */
-      gap: 10px; 
-      width: 100% !important;
-      text-align: end;
-
-      
-    }
+   
     }
   }
   .row {

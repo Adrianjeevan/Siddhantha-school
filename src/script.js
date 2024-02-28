@@ -31,6 +31,55 @@ if (document.querySelector(".first-fold-wrapper")) {
   }
 }
 
+
+$(document).ready(function () {
+  var heroSlider = $(".hero-slider");
+  heroSlider.owlCarousel({
+    loop: true,
+    items: 1,
+    animateOut: "fadeOut",
+    animateIn: "fadeIn",
+    dots: true,
+    navText: ["<", ">"],
+
+    margin: 0,
+    autoplay: true,
+    nav: true,
+  });
+
+  heroSlider.on("changed.owl.carousel", function (event) {
+    var item = event.item.index - 2;
+    $("h3").removeClass("animate__animated animate__zoomInLeft");
+    $(".owl-item")
+      .not(".cloned")
+      .eq(item)
+      .find("h3")
+      .addClass("animate__animated animate__zoomInLeft");
+
+    $("h2").removeClass("animate__animated animate__zoomInLeft");
+    $(".owl-item")
+      .not(".cloned")
+      .eq(item)
+      .find("h2")
+      .addClass("animate__animated animate__zoomInLeft");
+
+    $("a").removeClass("animate__animated animate__zoomInLeft");
+    $(".owl-item")
+      .not(".cloned")
+      .eq(item)
+      .find("a")
+      .addClass("animate__animated animate__zoomInLeft");
+  });
+});
+
+
+
+
+
+
+
+
+
 if (document.querySelector(".events-slider")) {
   var eventslider = tns({
     container: ".events-slider",
@@ -181,45 +230,7 @@ if (document.querySelector(".mission-grid")) {
   });
 }
 
-$(document).ready(function () {
-  var heroSlider = $(".hero-slider");
-  heroSlider.owlCarousel({
-    loop: true,
-    items: 1,
-    animateOut: "fadeOut",
-    animateIn: "fadeIn",
-    dots: true,
-    navText: ["<", ">"],
 
-    margin: 0,
-    autoplay: true,
-    nav: true,
-  });
-
-  heroSlider.on("changed.owl.carousel", function (event) {
-    var item = event.item.index - 2;
-    $("h3").removeClass("animate__animated animate__zoomInLeft");
-    $(".owl-item")
-      .not(".cloned")
-      .eq(item)
-      .find("h3")
-      .addClass("animate__animated animate__zoomInLeft");
-
-    $("h2").removeClass("animate__animated animate__zoomInLeft");
-    $(".owl-item")
-      .not(".cloned")
-      .eq(item)
-      .find("h2")
-      .addClass("animate__animated animate__zoomInLeft");
-
-    $("a").removeClass("animate__animated animate__zoomInLeft");
-    $(".owl-item")
-      .not(".cloned")
-      .eq(item)
-      .find("a")
-      .addClass("animate__animated animate__zoomInLeft");
-  });
-});
 
 if (document.querySelector(".course-slider")) {
   var slider = tns({

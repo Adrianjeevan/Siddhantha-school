@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
   <Section style="padding-top:0;">
     <div class="container">
       <div class="course-content">
-        <div>
+        <div class="blue-box">
           <div class="sub-title">
             Summer Camp Program in Banglore
           </div>
@@ -35,20 +35,20 @@ Siddhanta Intellectual School is one of the pioneers of the preschool segment, w
             If your child is under 6 years old, you will have various summer camping opportunities at Siddhanta Intellectual School. Our summer camp overview for young campers who miss kindergarten or are about to go to kindergarten is a selection of the many different activities. Here are some fun summer camp activities:
           </p>
 
-          <ul>
-            <li>Magic Mania</li>
-            <li>Cunning Clay</li>
-            <li>Yoga and Zumba</li>
-            <li>Music and Dance</li>
-            <li>Making Dolls</li>
-            <li>Exciting Game</li>
-            <li>Creative Craftsmanship</li>
-            <li>Vegetable Sculpture</li>
-            <li>Flower Arrangement</li>
-            <li>Moving Story</li>
-            <li>Curious Scientist</li>
-            <li>Delicious Refractory Cooking</li>
-            <li>Busy Brains - Riddles and Riddles</li>
+          <ul class="new-tiles">
+            <li class="tile-item">Magic Mania</li>
+            <li class="tile-item">Cunning Clay</li>
+            <li class="tile-item">Yoga and Zumba</li>
+            <li class="tile-item">Music and Dance</li>
+            <li class="tile-item">Making Dolls</li>
+            <li class="tile-item">Exciting Game</li>
+            <li class="tile-item">Creative Craftsmanship</li>
+            <li class="tile-item">Vegetable Sculpture</li>
+            <li class="tile-item">Flower Arrangement</li>
+            <li class="tile-item">Moving Story</li>
+            <li class="tile-item">Curious Scientist</li>
+            <li class="tile-item">Delicious Refractory Cooking</li>
+            <li class="tile-item">Busy Brains - Riddles and Riddles</li>
         </ul>
         </div>
       </div>
@@ -60,6 +60,42 @@ Siddhanta Intellectual School is one of the pioneers of the preschool segment, w
 </Layout>
 
 <style lang="scss">
+
+.new-tiles{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr );
+    gap: 3rem;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (max-width:991px) {
+      grid-template-columns: repeat(2 , 1fr );
+    }
+   
+    @media screen and (max-width:500px) {
+      grid-template-columns: repeat(1 , 1fr );
+      gap: 1rem;
+    }
+   
+
+    .tile-item{
+      background-color: rgb(215, 234, 248);
+      padding:1rem 1rem ;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease;
+
+      &:hover{
+        background-color: var(--blue);
+        color:white !important;
+        
+      }
+      
+    }
+
+  }
   .lists {
     > :nth-child(1) {
       background-color: aliceblue;

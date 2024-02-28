@@ -38,9 +38,9 @@ import Layout from "../layouts/Layout.astro";
           <p>
             A comprehensive learning environment and well-guided facilities provide the nutrition needed for preschool children. Our interactive teaching methods and teaching sessions make Siddhanta Intellectual School one of the best Pre School in bangalore.
           </p>
-          <ul>
-            <li><span>Montessori :</span>  Siddhanta Intellectual School, the best Pre School in bangalore, provide students with an education that approaches several areas of child development. We are focused on your child's psychological, natural, social, and physical development that allows them to grow freely within limits. In addition, the inclusion of specialized materials by our teachers makes education very interesting.</li>
-            <li><span>Kindergarten :</span> The Siddhanta Intellectual School focuses on social participation, self-activity and creativity. Children are given the freedom to immerse themselves in fun learning at this level. At Siddhanta Intellectual School, education is imported through a variety of practical activities such as singing, playing, writing, painting and social interaction.</li>
+          <ul class="new-tiles" >
+            <li class="tile-item"><span>Montessori :</span>  Siddhanta Intellectual School, the best Pre School in bangalore, provide students with an education that approaches several areas of child development. We are focused on your child's psychological, natural, social, and physical development that allows them to grow freely within limits. In addition, the inclusion of specialized materials by our teachers makes education very interesting.</li>
+            <li class="tile-item"><span>Kindergarten :</span> The Siddhanta Intellectual School focuses on social participation, self-activity and creativity. Children are given the freedom to immerse themselves in fun learning at this level. At Siddhanta Intellectual School, education is imported through a variety of practical activities such as singing, playing, writing, painting and social interaction.</li>
           </ul>
         </div>
       </div>
@@ -51,6 +51,37 @@ import Layout from "../layouts/Layout.astro";
   <OtherClass />
 </Layout>
 
-<style lang="scss" is:global>
-  
+<style lang="scss" >
+  .new-tiles{
+   padding: 0 ;
+    list-style: none;
+
+   
+   
+
+    .tile-item{
+      background-color: rgb(215, 234, 248);
+      padding:2rem 2rem ;
+      border-radius: 20px;
+      display: flex;
+      gap: 1rem;
+      // justify-content: center;
+
+      flex-direction: column;
+      // align-items: center;
+      transition: all 0.5s ease;
+
+      span{
+        color: var(--dark-blue);
+      }
+
+      &:hover{
+        background-color: var(--blue);
+        color:white !important;
+        
+      }
+      
+    }
+
+  }
 </style>

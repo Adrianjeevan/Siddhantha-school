@@ -279,6 +279,9 @@ gsap.from(".map", {
 
 
 
+
+
+
 gsap.from(".admission", {
   scrollTrigger: {
     trigger: ".admission", 
