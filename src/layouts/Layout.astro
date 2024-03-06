@@ -1,6 +1,7 @@
 ---
 interface Props {
   title: string;
+  canonical:string;
 }
 
 const { title } = Astro.props;
@@ -33,6 +34,7 @@ import "../styles/style.css";
     <meta property="og:image" content="/images/logo.png">
     <meta property="og:url" content="https://www.siddhantaschool.com/">
     <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+    <link rel="canonical" href={canonical} > 
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Siddhantha Intellectual school</title>
 
@@ -161,6 +163,8 @@ import "../styles/style.css";
         </svg>
         <a></a>
       </a>
+    </div>
+
       <Footer />
 
       <script
