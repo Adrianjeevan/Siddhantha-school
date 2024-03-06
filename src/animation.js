@@ -2,6 +2,45 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+
+// Select all elements with the class "yellow-title"
+const sectionTitles = document.querySelectorAll('.section-title');
+
+// Loop through each yellow title element
+sectionTitles.forEach((title) => {
+  // Apply GSAP animation to each title
+  gsap.from(title, {
+    scrollTrigger: {
+      trigger: title, // Use the current title element as trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    opacity: 0,
+    scrub:"true",  
+    duration: 1 ,
+    delay: 0,
+  });
+});
+
+
+gsap.from(".net-slides", {
+  scrollTrigger: {
+    trigger: ".net-slides",
+    start: "top 80%",
+
+    toggleActions: "play none none reverse",
+    // markers: true,
+  },
+  y: 20,
+  opacity: 0,
+  duration: 0.3,
+  delay: 0,
+  stagger: 0.4,
+
+  ease: "power4.inOut",
+});
+
 gsap.from(".fadein", {
   scrollTrigger: {
     trigger: ".fadein",
@@ -276,7 +315,6 @@ gsap.from(".map", {
   
   delay: 0,
 });
-
 
 
 

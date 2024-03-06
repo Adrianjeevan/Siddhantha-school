@@ -3,12 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-import { Fancybox } from "@fancyapps/ui";
-
-import { Carousel } from "@fancyapps/ui";
-
-Fancybox.bind();
-
 let headerHeight = document.querySelector("header").offsetHeight;
 
 // set css variable header-height to the height of <header>
@@ -16,21 +10,40 @@ document.documentElement.style.setProperty(
   "--header-height",
   headerHeight + "px"
 );
-if (document.querySelector(".first-fold-wrapper")) {
-  if (window.innerWidth < 768) {
-    document.querySelector("header").nextElementSibling.style.marginTop =
-      headerHeight + "px";
-    // add headerHeight to .first-fold
-    document.querySelector(".first-fold-wrapper").style.marginTop =
-      headerHeight + "px";
-  } else {
-    document.querySelector(".first-fold-wrapper").style.marginTop =
-      headerHeight + "px";
-    document.querySelector("header").nextElementSibling.style.marginTop =
-      headerHeight + "px";
-  }
-}
 
+if (document.querySelector(".gallery-slider")) {
+  var galleryslider = tns({
+    container: ".gallery-slider",
+    slideBy: 1,
+    autoplay: false,
+    edgePadding: 0,
+    nav: false,
+    autoplayButton: false,
+    autoplayButtonOutput: false,
+    controls: true,
+    controlsContainer: ".gallery-controls",
+    responsive: {
+      0: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      640: {
+        edgePadding: 0,
+        gutter: 0,
+        items: 1,
+      },
+      700: {
+        gutter: 30,
+        items: 1,
+      },
+      900: {
+        items: 1,
+        gutter: 10,
+      },
+    },
+  });
+}
 
 $(document).ready(function () {
   var heroSlider = $(".hero-slider");
@@ -72,14 +85,6 @@ $(document).ready(function () {
   });
 });
 
-
-
-
-
-
-
-
-
 if (document.querySelector(".events-slider")) {
   var eventslider = tns({
     container: ".events-slider",
@@ -108,32 +113,28 @@ if (document.querySelector(".events-slider")) {
       },
       700: {
         gutter: 0,
+        items: 2,
+      },
+      1080: {
+        gutter: 0,
         items: 3,
       },
     },
   });
 
-  gsap.utils.toArray(".latest-slide").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.4,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+  gsap.from(".events-slider .tns-slide-active", {
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4, // Stagger based on slide index
-      },
-    });
+    scrollTrigger: {
+      trigger: ".events-slider .tns-slide-active", // Use the current title element as trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7, 
   });
-
-
 }
-
 
 if (document.querySelector(".messages-slider")) {
   var eventslider = tns({
@@ -144,8 +145,8 @@ if (document.querySelector(".messages-slider")) {
     edgePadding: 0,
     gutter: 20,
     mouseDrag: true,
-    controlsContainer:".founder-controls", 
-   
+    controlsContainer: ".founder-controls",
+
     autoplayButton: false,
     autoplayButtonOutput: false,
     nav: false,
@@ -167,18 +168,7 @@ if (document.querySelector(".messages-slider")) {
       },
     },
   });
-
-  
-
-
 }
-
-
-
-
-
-
-
 
 if (document.querySelector(".mission-grid")) {
   var slider = tns({
@@ -212,25 +202,25 @@ if (document.querySelector(".mission-grid")) {
     },
   });
 
-  gsap.utils.toArray(".mission-grid .wrapper ").forEach(function (slide, index  ) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+  gsap.utils
+    .toArray(".mission-grid .wrapper ")
+    .forEach(function (slide, index) {
+      gsap.from(slide, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: slide,
+          start: "top 80%",
+          scale: 0.9,
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4 * index // Stagger based on slide index
-      },
+          // For debugging, you can remove this in production
+          toggleActions: "play none none reverse",
+          stagger: 0.4 * index, // Stagger based on slide index
+        },
+      });
     });
-  });
 }
-
-
 
 if (document.querySelector(".course-slider")) {
   var slider = tns({
@@ -341,60 +331,6 @@ if (document.querySelector(".facility-slider")) {
   });
 }
 
-if (document.querySelector(".gallery-slider")) {
-  var galleryslider = tns({
-    container: ".gallery-slider",
-
-    slideBy: 1,
-    autoplay: false,
-    edgePadding: 0,
-    // navContainer: ".nav-container",
-    // navAsThumbnails: false,
-    nav: false,
-    autoplayButton: false,
-    autoplayButtonOutput: false,
-    controls: true,
-    controlsContainer: ".gallery-controls",
-    responsive: {
-      0: {
-        edgePadding: 0,
-        gutter: 0,
-        items: 1,
-      },
-      640: {
-        edgePadding: 0,
-        gutter: 0,
-        items: 1,
-      },
-      700: {
-        gutter: 30,
-        items: 1,
-      },
-      900: {
-        items: 1,
-        gutter: 10,
-      },
-    },
-  });
-
-  galleryslider.events.on("indexChanged", function (info) {
-    // Target the current active slide link
-    var activeLink = $(".gallery-slider .tns-slide-active .slide-link");
-
-    // GSAP animation
-    gsap.from(".gallery-slider .tns-slide-active .slide-link", {
-      y: 10,
-      stagger: 0.2,
-      opacity: 0,
-      duration: 0.7,
-      scale: 0.9,
-      ease: "power4.inOut",
-    });
-  });
-
-
-}
-
 if (document.querySelector(".journey-one")) {
   var slider = tns({
     container: ".journey-one",
@@ -461,7 +397,7 @@ if (document.querySelector(".educator")) {
       },
       700: {
         gutter: 30,
-        items: 2,
+        items: 1,
       },
       900: {
         items: 1,
@@ -509,22 +445,35 @@ if (document.querySelector(".testimonials")) {
     },
   });
 
+  gsap.from(".testimonials .tns-slide-active", {
 
-  gsap.utils.toArray(".testimonials .slide").forEach(function (slide, index) {
-    gsap.from(slide, {
-      y: 100,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: slide,
-        start: "top 80%",
-        scale: 0.9,
+    scrollTrigger: {
+      trigger: ".testimonials .tns-slide-active", // Use the current title element as trigger
+      start: "top 80%",
+      toggleActions: "play none none reverse",
+    },
+    y: 50,
+    stagger: 0.2,
+    opacity: 0,
+    duration: 0.7, 
+  });
 
-        // For debugging, you can remove this in production
-        toggleActions: "play none none reverse",
-        stagger: 0.4 * index // Stagger based on slide index
-      },
-    });
+  slider.events.on("indexChanged", function (info) {
+    // Target the current active slide link
+    var activeLink = $(".testimonials .tns-slide-active");
+
+    // GSAP animation with requestAnimationFrame
+    function animate() {
+      gsap.from(activeLink, {
+        y: 10,
+        stagger: 0.2,
+        opacity: 0,
+        duration: 0.7,
+      });
+    }
+
+    // Request animation frame
+    requestAnimationFrame(animate);
   });
 }
 

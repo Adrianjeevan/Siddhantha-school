@@ -43,6 +43,43 @@
   margin-top: 2rem;
 }
 
+.activities {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  place-content: center !important;
+  row-gap: 2rem;
+  column-gap: 3rem;
+}
+@media screen and (max-width: 991px) {
+  .activities {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .activities {
+    grid-template-columns: repeat(1, 300px);
+  }
+  .activities .cards {
+    height: auto !important;
+  }
+}
+.activities > div {
+  background-color: rgb(234, 235, 235);
+  width: 100%;
+  height: 230px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.activities > div img {
+  max-width: 70px;
+}
+
 .events-section {
   position: relative;
 }

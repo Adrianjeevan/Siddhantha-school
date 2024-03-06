@@ -221,7 +221,11 @@ import FancyButton from "./FancyButton.astro";
         width: 100%;
         // padding-top: 10rem;
        
-     
+     >:nth-child(1){
+      @media screen and (max-width:1080px) {
+        text-align: center ;
+      }
+     }
 
         > :nth-child(2) {
           // background-color: red;

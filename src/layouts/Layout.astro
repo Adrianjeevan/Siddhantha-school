@@ -28,7 +28,7 @@ import "../styles/style.css";
       name="viewport"
       content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Siddhantha Intellectual school</title>
 
@@ -92,6 +92,22 @@ import "../styles/style.css";
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+  />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EN5BSSSSPD"></script>
+<script is:inline >
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EN5BSSSSPD');
+</script>
+
+
   </head>
   <body>
     <Header />
@@ -148,29 +164,23 @@ import "../styles/style.css";
       src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
       integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
-    <script
-      is:inline
-      src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"
-    ></script>
-
-    <script is:inline>
-      var style = document.createElement("style");
-      var position = "right";
-
-      style.innerHTML = `
-  @keyframes my-animation{
-    0%{${position}:${document.querySelector(".running-text").offsetWidth + 10}px;}
-    100%{${position}:100%}
-  }`;
-
-      document.head.append(style);
+      referrerpolicy="no-referrer">
     </script>
+
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
+
+    <script
+    src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+  ></script>
 
     <script>
       import "../script";
       import "../animation";
     </script>
+
+
+
   </body>
 </html>
 <style is:global lang="scss">
@@ -212,8 +222,8 @@ import "../styles/style.css";
     position: fixed;
     right: 30px;
     bottom: 30px;
-    width: 80px;
-    height: 80px !important; 
+    width: 60px;
+    height: 60px !important; 
     border-radius: 10px;
     height: auto; 
     background-color: rgb(18, 220, 82);
@@ -236,8 +246,8 @@ import "../styles/style.css";
     // background-color: red;
 
     svg{
-      width: 60px; 
-      height: 60px;
+      width: 40px; 
+      height: 40px;
       fill:white;
     }
   }

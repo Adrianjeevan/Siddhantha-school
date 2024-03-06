@@ -53,10 +53,31 @@ import Section from "./Section.astro";
         </div>
         </div>  
     </div>
+
+    <div class="mission-controls">
+      <div class="control-button prev">
+        <img src="/images/left.jpg" alt="" style="max-width:30px" />
+      </div>
+      <div class="control-button next">
+        <img src="/images/right.jpg" alt="" style="max-width:30px" />
+      </div>
+    </div>
 </div>
 </Section>
 
 <style lang="scss">
+
+.mission-controls {
+   
+  display: none;
+
+    @media screen and (max-width:991px) {
+      justify-content: center;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    }
+  }
   .mission-grid {
   
 
