@@ -179,7 +179,7 @@ if (document.querySelector(".mission-grid")) {
     edgePadding: 0,
     gutter: 20,
     mouseDrag: true,
-
+    controlsContainer:'.mission-controls',
     autoplayButton: false,
     autoplayButtonOutput: false,
     nav: false,
