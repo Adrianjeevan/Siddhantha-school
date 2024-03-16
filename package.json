@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@fancyapps/ui": "^5.0.28",
+    "animate.css": "^4.1.1",
     "astro": "^3.6.3",
+    "bootstrap": "5.3.3",
     "gsap": "^3.12.4",
     "sass": "^1.69.5",
     "swiper": "^11.0.5",
