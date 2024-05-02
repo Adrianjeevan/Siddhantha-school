@@ -1,21 +1,192 @@
 ---
+import SectionTitle from "../components/SectionTitle.astro"
 import Layout from "../layouts/Layout.astro"
+
 ---
 
 <Layout title="Mandatory-disclosure">
   <div class="mandatory">
     <div class="container">
-      <div class="mandatory-wrapper">
-      <h2 class="text-center pt-5 mt-5">  Mandatory Disclosure</h2>
-      </div>
+      <div class="disclosure-section">
+        <div class="container">
+            <SectionTitle title="CBSE Mandatory Disclosure" classes="text-center" style="padding-bottom:3rem;"/>
+           
+            <div class="disclosure">
+                <ul>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Building Safety Certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/building.pdf" download="Building Safety Certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Fire Safety Certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/fire-safety.pdf" download="Fire Safety Certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Land Certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/land.pdf" download="Land Certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Mandatory Disclosure</p>
+                            </div>
+                            <div>
+                                <a href="/images/mandatory-disclosure.pdf" download="Mandatory Disclosure.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>No Objection Certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/no-objection.pdf" download="No Objection Certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Recognition Certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/recognition.pdf" download="Recognition Certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Self Certification- Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/self-certificate.pdf" download="Self Certification-Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                   
+                    <li>
+                        <div>
+                            <div>
+                                <p>Society Registration  Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/socitey.pdf" download="Society Registration  Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div>
+                            <div>
+                                <p>Water and sanitary condition certificate Siddhantha School</p>
+                            </div>
+                            <div>
+                                <a href="/images/water_health.pdf" download="Water and sanitary condition certificate Siddhantha School.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>
+                                <p>Water Sample test report siddhantha school</p>
+                            </div>
+                            <div>
+                                <a href="/images/water-sample.pdf" download="Water Sample test report siddhantha school.pdf">click here</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
     </div>
   </div>
 </Layout>
 
-<style>
+<style lang="scss">
     .mandatory-wrapper{
         margin-top: var(--header-height);
         height: 40vh;
 
+    }
+
+    .disclosure-section{
+      margin-top: var(--header-height);
+      padding: 5rem 0;
+
+    //   height: 80vh;
+
+      .disclosure{
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+
+
+        ul{
+            height: 100%;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            list-style: none;
+            // background-color: red;
+            // gap: 2rem;
+            // align-items: center;
+
+            @media screen and (max-width:500px) {
+                width: 100% !important;
+            }
+
+            li{
+                >:nth-child(1){
+                    display: flex;
+                    width: 100% !important;
+                    justify-content: space-between;
+                    border-bottom: solid 2px var(--brown);
+                    padding: 1rem;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    
+                    // justify-content: center;
+
+                    @media screen and (max-width:500px) {
+               p, a{
+                font-size: 12px;
+               }
+            }
+
+                    &:hover{
+                        background-color: var(--brown);
+                        color: white;
+                    }
+                }
+            }
+        }
+      }
     }
 </style>
